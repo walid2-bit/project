@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--Google Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900;1000&amp;display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="auth">
+    <!--Left Logo-->
+    <img class="delta-out" src="image/logo.png" alt="" />
+    <div class="container">
+        <!--Big Image-->
+        <div class="images">
+            <div>
+                <img class="main-image" src="image/Rectangle 73.png" alt="" />
+                <img class="delta-in" src="image/logo.png" alt="" />
+            </div>
+        </div>
+        <div class="login">
+            <div class="header">
+                <p>!مرحبا بك مجددا</p>
+                <h2 style="margin-top: 10px;">أنشئ حسابك الان</h2>
+                <p>يرجي انشاء حساب جديد للمتابعه</p>
+            </div>
+            <div class="client">
+                <!-- <a class="vip" href="">vip</a>
+                <a class="student" href="loginStu.html">طالب</a> -->
+                <div class="radio-input">
+                    <label>
+                        <input type="radio" checked id="vip" name="value-radio" onchange="changeForm(event)" value="vip" />
+                        <span>Vip</span>
+                    </label>
+                    <label>
+                        <input type="radio" id="student" name="value-radio" onchange="changeForm(event)" value="student" />
+                        <span>student</span>
+                    </label>
+
+                    <!-- <span class="selection"></span> -->
+                </div>
+            </div>
+            <form action="" id="vipForm">
+                <label for="">الاسم</label>
+                <input class="input"  type="text" />
+                <label for="">رقم الجوال</label>
+                <input class="input" type="text" />
+                <label for="">رقم البطاقه</label>
+                <input class="input"  type="text" />
+                <label for="">كلمه المرور</label>
+                <input class="input" type="password" />
+                <div class="note">
+                    <div style="margin-left: auto;">
+                        <span>الموافقه علي</span>
+                        <span class="mark">الشروط والاحكام</span>
+                        <input type="checkbox" />
+                    </div>
+                </div>
+                <button class="button">
+
+                    <p><a href="./login.html">انشاء حساب</a> </p>
+                  </button>
+                <!-- <a class="send" href="">انشاءحساب</a> -->
+            </form>
+            <form action="" id="stuForm" class="d-none">
+                <label for="">الاسم</label>
+                <input class="input" type="text" />
+                <label for="">البريد الالكتروني</label>
+                <input class="input" type="text" />
+                <div style="display: flex;gap: 33px;">
+                    <div>
+                        <label for="">المجموع</label><br>
+                        <input type="text" />
+                    </div>
+                    <div>
+                        <label for="">المدرسه الثانويه</label><br>
+                        <input type="text" />
+                    </div>
+                </div>
+                <div style="display: flex;gap: 33px;">
+                    <div>
+                        <label for="">كلمه المرور</label><br>
+                        <input type="password" />
+                    </div>
+                    <div>
+                        <label for=""> العنوان</label><br>
+                        <input type="text" />
+                    </div>
+                </div>
+                <div class="note">
+                    <div style="margin-left: auto;">
+                        <span>الموافقه علي</span>
+                        <span class="mark">الشروط والاحكام</span>
+                        <input type="checkbox" />
+                    </div>
+                </div>
+                <button class="button">
+                    <p>انشاء حساب</p>
+                  </button>
+                <!-- <a class="send" href="">انشاءحساب</a> -->
+            </form>
+            <div class="footer">
+                <a href="login.html">تسجيل دخول</a>
+                <p>لديك حساب بالفعل ؟</p>
+            </div>
+        </div>
+    </div>
+    <!--Right Logo-->
+    <a href="login.html"> <img class="back" src="image/Group 1000002282.png" alt="" /></a>
+   
+    <script>
+        function changeForm(event) {
+            // console.log(event.target.value)
+            var vipForm = document.getElementById("vipForm")
+            var stuForm = document.getElementById("stuForm")
+            var inputValue = event.target.value
+            if(inputValue=="vip"){
+                vipForm.classList.remove("d-none")
+                stuForm.classList.add("d-none")
+            }else{
+                stuForm.classList.remove("d-none")
+                vipForm.classList.add("d-none")
+            }
+        }
+    </script>
+</body>
+
+</html>

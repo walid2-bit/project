@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio</title>
+    <!-- <link rel="stylesheet" href="css/home.css"/> -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&#038;display=swap" rel="stylesheet" />
+</head>
+<body style="background-color: rgba(242, 250, 255, 1);">
+    <style>
+        * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  :root {
+    --main-color: #2196f3;
+    --main-color-alt: #1787e0;
+    --main-transition: 0.3s;
+    --main-padding-top: 100px;
+    --main-padding-bottom: 100px;
+    --section-background: #ececec;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: "Cairo", sans-serif;
+  }
+  a {
+    text-decoration: none;
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  body, html {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+  padding: 0px;
+  margin: 0px;
+  max-width: 100%;
+  /* overflow: hidden; */
+  }
+  /* Small */
+@media (min-width: 768px) {
+    .container {
+      width: 750px;
+    }
+  }
+  /* Medium */
+  @media (min-width: 992px) {
+    .container {
+      width: 970px;
+    }
+  }
+  /* Large */
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+  }
+  /* End Global Rules */
+  .portfolio{
+  background-color: rgba(242, 250, 255, 1);
+}
+.portfolio .container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 50px;
+}
+.portfolio .container ul{
+  display: flex;
+  gap: 54px;
+}
+@media (max-width: 767px){
+  .portfolio .container ul{
+    gap: 15px;
+  }
+}
+.portfolio .container ul li a{
+  color: black;
+}
+.portfolio .container ul li a.active{
+  color: #1787e0;
+  border-bottom: 1px solid blue;
+}
+
+.portfolio .container ul li a:hover{
+  border-bottom: 1px solid blue;
+  color: #1787e0;
+}
+.portfolio .container  .push-menu{
+  background-color: rgba(23, 92, 211, 1);
+  border-radius: 11px;
+  padding: 10px;
+  color: wheat;
+  width: 155px;
+  text-align: center;
+}
+/* end tittle */
+.container{
+    display: flex;
+    width: 100%;
+    padding: 20px;
+    gap: 20px;
+}
+.main-content{
+    flex: 3;
+    margin-left: 20px;
+}
+.side-bar{
+    /* flex: ; */
+    background-color: rgba(255, 255, 255, 1);
+        border-radius: 15px;
+        position: relative;
+      width: 300px;
+        text-align: end;
+        padding: 10px;
+        height: 153vh;
+}
+.side-bar .box{
+        display: flex;
+        gap: 25px;
+        justify-content: flex-end;
+        padding-bottom: 10px;
+    }
+    .side-bar .box img{
+        width: 62px;
+    border-radius: 50%;
+    height: 64px;
+    position: relative;
+    bottom: -17px;
+    }
+.side-bar h5{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.side-bar ul li{
+        padding-bottom: 20px;
+    }
+    .side-bar ul li > a{
+        text-align: center;
+        font-size: 21px;
+    }
+    .side-bar ul li{
+        padding: 10px 10px;
+    }
+    .side-bar ul li:hover{
+        background-color: rgba(206, 240, 255, 1);
+    }
+    .side-bar ul li > img{
+        text-align: center;
+        width: 23px;
+    }
+    .side-bar .logout{
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+        padding: 10px 28px;
+    }
+    .side-bar .logout >a{
+        color: red;
+        font-size: 24px;
+    }
+.profile-info, 
+.room-info{
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    position: relative;
+    text-align: center;
+}
+.profile-info .tittle{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 30px;
+}
+
+.profile-info h2{
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: end;
+}
+.profile-info .edit{
+    background-color: rgba(23, 92, 211, 1);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+.profile-info form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: relative;
+    flex-wrap: wrap;
+    width: 100%;
+  max-width: 100%; /* يمكنك تغيير العرض حسب الحاجة */
+  margin: 0 auto; /* لتوسيط النموذج */
+
+}
+.profile-info .box{
+  display: flex;
+  gap: 10px; 
+}
+
+.profile-info .box input{
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.profile-info .box .name{
+    width: 100%; 
+}
+
+.profile-info .box input{
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+    direction: rtl;
+}
+.profile-info .box label{
+    display: block;
+}
+.profile-info label{
+    font-size: 20px;
+    text-align: end;
+}
+.profile-info input{
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+    direction: rtl;
+}
+.profile-info input:focus,
+.room-info input{
+    outline: none;
+}
+/* end .profile-info */
+.room-info h3{
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: end;
+}
+.room-info .box{
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+    align-items: center;
+}
+.room-info .box .inputs{
+display: flex;
+flex-direction: column;
+position: relative;
+width: 100%;
+}
+
+.room-info .box .inputs input{
+    flex: 1;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+    direction: rtl;
+}
+.room-info .box .inputs label{
+    display: block;
+    text-align: end;
+}
+.room-info .box2{
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 25px;
+}
+.room-info .box2 input{
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+    direction: rtl;
+}
+.room-info .box2 label{
+    display: block;
+    text-align: end;
+}
+
+@media (max-width: 767px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 1px;
+        place-items: anchor-center;
+    }
+    .main-content {
+    margin-left: 0; 
+  }
+    .side-bar{
+        height: 60vh;
+        flex-direction: row;
+    }
+    .room-info .image img{
+        display: none;
+    }
+}
+
+
+.footer{
+  background-color: var(--main-color-footer);
+  background-color: rgba(1, 89, 147, 1);
+}
+.footer .container > a{
+  color: white;
+}
+.footer .container{
+  padding: 0px;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+
+}
+.footer .container {
+  text-align: end;
+}
+.footer .container h1{
+  font-size: 20px; 
+  color: white;
+}
+.footer .container  li{
+  margin-bottom: 10px;
+  color: white;
+}
+.footer .container li a{
+color: white;
+font-size: 16px;
+}
+.footer .container p{
+    color: white;
+}
+.footer .container .social > img{
+  display: block;
+  place-self: center;
+}
+.footer .container .social ul{
+  display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+  
+}
+.footer .container .social .facebook{
+color: white;
+}
+.footer .container .social .instgram{
+color: red;
+}
+.footer .container .social .linkedin{
+color: white;
+}
+@media (max-width: 767px) {
+    .footer .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer .container h1 {
+        font-size: 18px;
+        text-align: center; 
+    }
+
+    .footer .container ul {
+        text-align: center; 
+    }
+
+    .footer .container ul li {
+        margin-bottom: 10px;
+    }
+
+    .footer .container ul li a {
+        font-size: 16px; 
+    }
+
+    .footer .container p {
+        text-align: center; 
+    }
+
+    .footer .container .social ul {
+        justify-content: center; 
+        gap: 15px; 
+    }
+
+    .footer .container .social ul li a {
+        font-size: 20px;
+    }
+}
+
+
+    </style>
+    <div class="portfolio">
+        <div class="container">
+            <a href="./login.html" class="push-menu" target="_blank">تسجيل الدخول</a>
+            <ul> 
+                <li><a href="portfolio.html" class="active">حسابي</a></li>
+                <li><a href="join.html">التسجيل</a></li>
+                <li><a href="room.html">الغرف</a></li>
+                <li><a href="index.html">الرئيسية</a></li>
+            </ul>
+           <img src="./image/logo.png">
+        </div>
+    </div>
+<div class="container">
+    <div class="main-content">
+        <div class="profile-info">
+            <div class="form-container">
+                <div class="tittle">
+                    <a href="#" class="edit">تعديل</a>
+                    <h2>البيانات الشخصية</h2>
+                </div>
+                <form>
+                    <div class="box">
+                        <div class="name">
+                            <label for="input2">الأسم الاخير </label>
+                            <input type="text" id="input2" name="name" placeholder="محمود" >
+                          </div>
+                        <div class="name">
+                          <label for="input1"> الاسم الأول</label>
+                          <input type="text" id="input1" name="name" placeholder="وليد">
+                        </div>
+                      </div>
+                    <label for="gender">النوع</label>
+                    <input type="text" id="gender" name="gender" placeholder="ذكر" >
+        
+                    <label for="email">البريد الإلكتروني</label>
+                    <input type="email" id="email" name="email" placeholder="w.ledo@gamil.com">
+        
+                    <label for="phone">رقم الهاتف</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+20105050505">
+        
+                    <label for="cardNumber">رقم البطاقة</label>
+                    <input type="text" id="cardNumber" name="cardNumber" placeholder="1234 5678 9101 1121">
+                </form>
+        </div>
+        </div>
+        <div class="room-info">
+            <h3>حالة الغرفة</h3>
+            <div class="form">
+                <div class="box">
+                    <div class="image">
+                        <img src="./image/small-juvenile-bedroom-arrangement 1.png" alt="">
+                    </div>
+                    <div class="inputs">
+                        <div class="number">
+                            <label for="">رقم الغرفة</label>
+                            <input type="number" placeholder="27" max="100" name="room" />
+                        </div>
+                        <div class="type">
+                            <label for="">نوع الغرفة</label>
+                            <input type="text" placeholder="مشتركة" name="type">
+                        </div>
+                        <div class="condition">
+                            <label for="">حاله الحجز</label>
+                            <input type="text" placeholder="تم الحجز" name="okay">
+                        </div>
+                    </div>
+                
+                </div>
+                 <div class="box2">
+                    <div class="price">
+                        <label for="">سعر الغرفة</label>
+                        <input type="text" placeholder="3000" name="price">
+                    </div>
+                
+                    <div class="time">
+                        <label for="">تاريخ الوصول</label>
+                        <input type="date" placeholder="27/1/2017" name="date">
+                    </div>
+                    <div class="attached">
+                        <label for="">مرافق الغرفة</label>
+                        <input type="text" placeholder="تكيف وبلايستيشن" name="text">
+                    </div>
+                    <div class="log">
+                        <label for="">تاريخ المغادرة</label>
+                        <input type="date" placeholder="27/1/2017" name="date">
+                    </div>
+                   
+                    
+                   
+                 </div>
+
+            </div>
+        </div>
+        </div>
+        <div class="side-bar">
+            <div class="box">
+                <h5>وليد محمود</h5>
+                <img src="./image/WhatsApp Image 2024-08-04 at 12.58.01 PM (1).jpeg" alt="">
+            </div>
+          
+        <ul>
+            <li>
+                <a href="portfolio.html">البيانات الشخصية</a>
+                <img src="./image/user-edit.png" alt="">
+            </li>
+            <li>
+                <a href="invoice.html">الفواتير</a>
+                <img src="./image/user-edit2.png" alt="">
+            </li>
+            <li>
+                <a href="#">المفضلة</a>
+                <img src="./image/heart.png" alt="">
+            </li>
+            <li>
+                <a href="#">الاشعارات</a>
+                <img src="./image/security-safe.png" alt="">
+            </li>
+            <li>
+                <a href="#">الخصوصية</a>
+                <img src="./image/security-safe2.png" alt="">
+            </li>
+            <li>
+                <a href="#">الاعدادات</a>
+                <img src="./image/mdi_cog-outline.png" alt="">
+            </li>
+            <div class="logout">
+                <a href="#"> خروج</a>
+                <img src="./image/logout.png" alt="">
+            </div>
+        </ul>
+        </div>
+</div>
+    <div class="footer">
+        <div class="container">
+            <div class="communication">
+                <h1>التواصل</h1>
+                <ul>
+                    <li><a href="#">جامعه الدلتا</a></li>
+                    <li><a href="#">نبذه عنا</a></li>
+                    <li>01040050010</li>
+                    <li>Deltauniversity56@gamil.com</li>
+                </ul>
+            </div>
+            <div class="help">
+                <h1>الدعم والمساعدة</h1>
+                <ul>
+                    <li><a href="#">الدعم الفني</a></li>
+                    <li><a href="#">دليل السكن</a></li>
+                    <li><a href="#">الشروط والأحكام</a></li>
+                    <li><a href="#">سياسه الخصوصية</a></li>
+                </ul>
+            </div>
+            <div class="page">
+                <h1>الصفحات</h1>
+                <ul>
+                    <li><a href="index.html">الرئيسية </a></li>
+                    <li><a href="join.html">التسجيل </a></li>
+                    <li><a href="room.html">الغرف </a></li>
+                    <li><a href="portfolio.html">الحساب الشخصي</a></li>
+                </ul>
+            </div>
+            <div class="social">
+                <img src="./image/logo.png" alt="" width="100px">
+                <p>ابحث عن مكان اقامتك المثالي </p>
+                <ul>
+                    <li><a href="#" class="instgram"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="#" class="facebook"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="#" class="linkedin"><i class="fa-brands fa-linkedin"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

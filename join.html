@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login student</title>
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <!--Google Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900;1000&amp;display=swap"
+        rel="stylesheet">
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
+        <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+        <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.rtl.min.css" integrity="sha512-VNBisELNHh6+nfDjsFXDA6WgXEZm8cfTEcMtfOZdx0XTRoRbr/6Eqb2BjqxF4sNFzdvGIt+WqxKgn0DSfh2kcA==" crossorigin="anonymous" referrerpolicy="no-referrer" />    <style>
+        * {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --main-color: #015993;
+            --main-color-alt: #0295D700;
+            --main-transition: 0.3s;
+            --main-padding-top: 100px;
+            --main-padding-bottom: 100px;
+            --section-background: #ececec;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Cairo", sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F2FAFF;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            padding-left: 15px;
+            padding-right: 15px;
+            margin-left: auto;
+            margin-right: auto;
+            overflow: hidden;
+        }
+
+        /* Small */
+        @media (min-width: 768px) {
+            .container {
+                width: 750px;
+            }
+        }
+
+        /* Medium */
+        @media (min-width: 992px) {
+            .container {
+                width: 970px;
+            }
+        }
+
+        /* Large */
+        @media (min-width: 1200px) {
+            .container {
+                width: 1170px;
+            }
+        }
+
+        .box-header {
+            background-image: url(image/image\ 3.png);
+            margin-bottom: 50px;
+            padding-bottom: 31px;
+        }
+
+        /*start Box header*/
+        .box-header .header {
+            padding-bottom: 80px;
+        }
+
+        .box-header .header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .box-header .header .container ul {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .box-header .header .container .push-menu {
+            background-color: var(--main-color);
+            border-radius: 11px;
+            padding: 10px;
+            color: white;
+            width: 155px;
+            text-align: center;
+        }
+
+        .box-header .header .container ul li .a {
+            color: white;
+            padding: 10px;
+        }
+
+        .box-header .header .container ul li .a:hover {
+            color: #0295D7;
+            border-bottom: 2px solid #0295D7;
+        }
+
+        .active {
+            color: #0295D7;
+            border-bottom: 2px solid #0295D7;
+            padding: 10px;
+        }
+        @media (max-width: 767px){
+            .box-header .header .container ul{
+                gap: 0px;;
+            }
+        }
+        .box-header .text {
+            text-align: center;
+            color: white;
+            margin-left: auto;
+            width: 697px;
+            margin-right: auto;
+        }
+
+        .box-header .text h2 {
+            font-size: 36px;
+        }
+        @media (max-width: 767px) {
+            .box-header .text h2 {
+                display: inline-block;
+        justify-self: anchor-center;
+        position: absolute;
+        top: 115px;
+        font-size: 15px;
+            }
+        }
+
+        /*End Box header*/
+        /*Start Login*/
+
+        .login .header {
+            text-align: center;
+            font-size: 40px;
+            margin-bottom: 41px;
+            font-weight: bold;
+        }
+
+        .login .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 25px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .login .container .box label {
+            font-weight: bold;
+        }
+
+        .login .container .box {
+            width: 45%;
+            text-align: right;
+        }
+
+        .login .container .box .submit {
+            margin-top: 34px;
+            text-align: center;
+            font-size: 21px;
+            padding: 10px;
+            background-color: var(--main-color);
+            color: white;
+            cursor: pointer;
+        }
+
+        .login .container .box .submit:hover {
+            background-color: #003a61;
+        }
+
+        .login .container .box input {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            width: 100%;
+            padding: 12px;
+            border-radius: 10px;
+            border: 2px solid rgba(210, 210, 210, 1);
+            outline: none;
+            text-align: right;
+            font-size: 15px;
+            font-weight: 600;
+            color: rgba(210, 210, 210, 1);
+            box-shadow: 0 0 3px #ddd;
+        }
+
+        .login .container .box input:focus {
+            border: 2px solid rgba(210, 210, 210, 1)
+        }
+
+        .login .container .box input::placeholder {
+            color: #D2D2D2;
+            font-weight: normal;
+        }
+
+        /*End Login*/
+        /*Start Sidbar*/
+        .sidbar {
+            text-align: center;
+            padding-top: 50px;
+        }
+
+        .sidbar .text h2 {
+            font-size: 40px;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .sidbar .text p {
+            color: #4A4B4B;
+        }
+
+        .sidbar .container {
+            margin-top: 50px;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 80px;
+        }
+
+        .sidbar .container img {
+            width: 30%;
+        }
+
+        /*End Sidbar*/
+        /*Start Footer*/
+        .footer {
+            background-color: var(--main-color);
+            color: white;
+            padding: 20px;
+        }
+
+        .footer a {
+            color: white;
+            font-size: 13px;
+        }
+
+        .footer .container {
+            padding: 0px;
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .footer .container .communication {
+            text-align: end;
+        }
+
+        .footer .container .communication h2 {
+            font-size: 30px;
+        }
+
+        .footer .container .communication li {
+            margin-bottom: 10px;
+        }
+
+        .footer .container .help {
+            text-align: end;
+        }
+
+        .footer .container .help li {
+            margin-bottom: 10px;
+        }
+
+        .footer .container .page {
+            text-align: end;
+        }
+
+        .footer .container .page li {
+            margin-bottom: 10px;
+        }
+
+        .footer .container .social {
+            text-align: end;
+        }
+
+        .footer .container .social>img {
+            display: block;
+            place-self: center;
+        }
+
+        .footer .container .social ul {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .footer .container .social .facebook,
+        .footer .container .social .instgram,
+        .footer .container .social .linkedin {
+            font-size: 20px;
+        }
+       
+      
+        @media (max-width: 767px) {
+            .footer {
+                width: 100%;
+            }
+
+            .footer .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer .container .communication,
+            .footer .container .help,
+            .footer .container .page,
+            .footer .container .social {
+                text-align: center;
+                margin: 0 auto;
+                width: 100%;
+            }
+
+            .footer .container .social ul {
+                gap: 5px;
+            }
+        }
+
+        /*End Footer*/
+        
+        .boxForm {
+            width: 65%;
+            margin: 5% auto;
+            border-radius: 15px;
+            background-color: #fff;
+            border: 1px solid #D2D2D2;
+            -webkit-box-shadow: 0px -4px 17px -7px rgba(0,0,0,0.61);
+            -moz-box-shadow: 0px -4px 17px -7px rgba(0,0,0,0.61);
+            box-shadow: 0px -4px 17px -7px rgba(0,0,0,0.61);
+            padding: 15px;
+        }
+        #exampleSelect {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            background-color: white;
+            font-size: 16px;
+            appearance: none; /* Removes default arrow */
+            -webkit-appearance: none; /* For Safari */
+            -moz-appearance: none; /* For Firefox */
+        }
+
+        /* Add a custom dropdown arrow */
+        .select-wrapper {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .select-wrapper::after {
+            content: "▼"; /* Unicode for dropdown arrow */
+            font-size: 14px;
+            position: absolute;
+            top: 50%;
+            right: 15px;
+            transform: translateY(-50%);
+            pointer-events: none;
+            color: #495057;
+        }
+        .input-group-text{
+            background-color: transparent;
+            border-left: 0;
+        }
+        .input-group input{
+            border-right: 0;
+        }
+        .upload {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+.upload__input {
+  font-size: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+.upload__btn{
+  border: 2px solid #b7c3db;
+  color: #ccc;
+  border-radius: 10px;
+  text-align: right;
+  background-color: white;
+  padding: 10px;
+  font-size: 15px;
+  /* font-weight: bold; */
+  /* background: url(http://annavlasenko.com/files-for-codepen/upload.png); */
+  /* background-position: 8px 8px; */
+  /* background-repeat: no-repeat; */
+}
+    </style>
+</head>
+
+<body>
+    <!--Start Box Header-->
+    <div class="box-header">
+        <div class="header">
+            <div class="container">
+                <a href="./login.html" class="push-menu">تسجيل الدخول</a>
+                <ul>
+                    <li><a class="a" href="portfolio.html">حسابي</a></li>
+                    <li><a class="active" href="join.html">التسجيل</a></li>
+                    <li><a class="a" href="room.html">الغرف</a></li>
+                    <li><a class="a" href="index.html">الرئيسية</a></li>
+                </ul>
+                <img class="logo-start" width="95px" src="image/logo.png">
+            </div>
+
+        </div>
+        <div class="text">
+            <h2>ابحث عن مكان إقامتك المثالي المستقبلي</h2>
+        </div>
+        <div class="boxForm" dir="rtl">
+            <div class="head">
+                <p>ابحث عن الغرف المتاحة</p>
+                <div class="row" style="justify-content: space-evenly;">
+                    <div class="col-md-3">
+                        <select class="form-select h-100">
+                            <option selected hidden>الموقع</option>
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                            <option value="3">Option 3</option>
+                        </select>
+                </div>
+                <div class="col-md-3">
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="fa-solid fa-sterling-sign"></i></span>
+                        <div class="form-floating">
+                          <input type="text" class="form-control" id="floatingInputGroup1" placeholder="Username">
+                          <label for="floatingInputGroup1">الميزانيه</label>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-md-3">
+                    <input type="date" class="form-control h-100" id="floatingInputGroup2" placeholder="Username">
+                </div>
+                <div class="col-md-3">
+                    <button class="btn btn-primary h-100 w-100">بحث</button>
+                </div>
+                </div>
+                </div> 
+            
+            </div>
+        <!-- <div class="box-end ">
+                <div class="head">
+                    <p>ابحث عن الغرف المتاحة</p>
+                    <i class="fa-sharp-duotone fa-solid fa-list-check"></i>
+                </div>
+                <div class="inputs">
+                    <input type="">
+                    <input type="date">
+                </div>
+            </div> -->
+    </div>
+    <!--End Box Header-->
+    <!--Start Login-->
+    <div class="login">
+        <h2 class="header">ابدأ طلبك الآن</h2>
+        <div class="container">
+            <div class="box">
+                <label for="">اسم المستخدم الجامعي</label><br>
+                <input type="text" placeholder="اسم المستخدم">
+                <label for="">كلمه المرور</label><br>
+                <input type="password" placeholder="٨ أحرف على الأقل">
+                <label for="">نوع الغرفه</label><br>
+                <input type="text" placeholder="أدخل النوع">
+                <label for="">قم بتحميل هويتك</label><br>
+                <div class="upload d-block w-100">
+                    <button class="upload__btn w-100 d-block mb-2 mt-2">
+                    <i class="fa-solid fa-upload"></i>
+                    قم بتحمل الملف
+                    </button>
+                    <input class="upload__input" type="file" name="myfile" />
+                  </div>
+                <!-- <input type="file" placeholder="تحميل الملف"> -->
+                <label for="">المجموع</label><br>
+                <input type="text" placeholder="أدخل مجموعك">
+                <input type="submit" class="submit" value="تسجيل ">
+            </div>
+            <div class="box">
+                <label for="">الاسم</label><br>
+                <input type="text" placeholder="أدخل اسمك">
+                <label for=""> البريد الالكتروني</label><br>
+                <input type="email" placeholder="أدخل البريد الالكتروني">
+                <label for=""> رقم الهاتف</label><br>
+                <input type="text" placeholder="مع رمز البلد">
+                <label for="">العنوان</label><br>
+                <input type="text" placeholder="ادخل عنوانك">
+                <label for="">المدرسه الثانويه</label><br>
+                <input type="text" placeholder="فني & عام">
+                <label for=""> جنسية الطالب</label><br>
+                <input type="text" placeholder="من اي بلد">
+            </div>
+
+        </div>
+    </div>
+    <!--End Login-->
+    <!--Start Sidbar-->
+    <div class="sidbar">
+        <div class="text">
+            <h2>دليلك لإقامة مريحة</h2>
+            <p>كل ما تحتاج لمعرفته لضمان سكنك المثالي بكل سهولة</p>
+        </div>
+        <div class="container">
+            <img src="image/additional tips.png" alt="">
+            <img src="image/guidlines.png" alt="">
+            <img src="image/Requirements.png" alt="">
+        </div>
+    </div>
+    <!--End sidbar-->
+    <!--Start Footer-->
+    <div class="footer">
+        <div class="container">
+            <div class="communication">
+                <h3>التواصل</h3>
+                <ul>
+                    <li><a href="#">جامعه الدلتا</a></li>
+                    <li><a href="#">نبذه عنا</a></li>
+                    <li>01040050010</li>
+                    <li>Deltauniversity56@gamil.com</li>
+                </ul>
+            </div>
+            <div class="help">
+                <h3>الدعم والمساعدة</h3>
+                <ul>
+                    <li><a href="#">الدعم الفني</a></li>
+                    <li><a href="#">دليل السكن</a></li>
+                    <li><a href="#">الشروط والأحكام</a></li>
+                    <li><a href="#">سياسه الخصوصية</a></li>
+                </ul>
+            </div>
+            <div class="page">
+                <h3>الصفحات</h3>
+                <ul>
+                    <li><a href="index.html">الرئيسية </a></li>
+                    <li><a href="join.html">التسجيل </a></li>
+                    <li><a href="room.html">الغرف </a></li>
+                    <li><a href="portfolio.html">الحساب الشخصي</a></li>
+                </ul>
+            </div>
+            <div class="social">
+                <img class="logo-end" src="./image/logo.png" alt="" width="100px">
+                <p>ابحث عن مكان اقامتك المثالي </p>
+                <ul>
+                    <li>
+                        <a href="#" class="instgram ">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="facebook ">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="linkedin ">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--End Footer-->
+    <script>
+        $( function() {
+          $( "#floatingInputGroup2" ).datepicker();
+        } );
+        </script>
+
+</body>
+
+</html>

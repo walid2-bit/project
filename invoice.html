@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio</title>
+    <!-- <link rel="stylesheet" href="css/normalize.css" /> -->
+    <!-- <link rel="stylesheet" href="css/home.css"/> -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="./webfonts/">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&#038;display=swap" rel="stylesheet" />
+</head>
+<style>
+            * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  :root {
+    --main-color: #2196f3;
+    --main-color-alt: #1787e0;
+    --main-transition: 0.3s;
+    --main-padding-top: 100px;
+    --main-padding-bottom: 100px;
+    --section-background: #ececec;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: "Cairo", sans-serif;
+    background-color: rgba(242, 250, 255, 1);
+  }
+  a {
+    text-decoration: none;
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  body, html {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    margin: 0 auto; /* توسيط الحاوية */
+    overflow: hidden;
+  }
+  /* Small */
+@media (min-width: 768px) {
+    .container {
+      width: 750px;
+    }
+  }
+  /* Medium */
+  @media (min-width: 992px) {
+    .container {
+      width: 970px;
+    }
+  }
+  /* Large */
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+  }
+  /* End Global Rules */
+  .portfolio{
+  background-color: rgba(242, 250, 255, 1);
+}
+.portfolio .container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 50px;
+}
+.portfolio .container ul{
+  display: flex;
+  gap: 54px;
+}
+@media (max-width: 767px){
+    
+    .portfolio .container{
+        gap: 10px;
+    }
+  .portfolio .container ul{
+    gap: 10px;
+    margin-left: 7px;
+  }
+}
+.portfolio .container ul li a{
+  color: black;
+}
+.portfolio .container ul li a.active{
+  color: #1787e0;
+  border-bottom: 1px solid blue;
+}
+
+.portfolio .container ul li a:hover{
+  border-bottom: 1px solid blue;
+  color: #1787e0;
+}
+.portfolio .container  .push-menu{
+  background-color: rgba(23, 92, 211, 1);
+  border-radius: 11px;
+  padding: 10px;
+  color: wheat;
+  width: 155px;
+  text-align: center;
+}
+/* end tittle */
+.container{
+    display: flex;
+    width: 100%;
+    padding: 20px;
+    gap: 50px;
+    position: relative;
+}
+.main-content{
+    flex: 3;
+    margin-left: 20px;
+}
+
+
+.side-bar{
+    background-color: rgba(255, 255, 255, 1);
+        border-radius: 15px;
+        position: relative;
+      width: 300px;
+        text-align: end;
+        padding: 10px;
+        height: 110vh;
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+        
+}
+.side-bar .box{
+        display: flex;
+        gap: 25px;
+        justify-content: flex-end;
+        padding-bottom: 10px;
+    }
+    .side-bar .box img{
+     width: 62px;
+    border-radius: 50%;
+    height: 64px;
+    position: relative;
+    bottom: -17px;
+    }
+.side-bar h5{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.side-bar ul li{
+        padding-bottom: 20px;
+    }
+    .side-bar ul li > a{
+        text-align: center;
+        font-size: 21px;
+    }
+    .side-bar ul li{
+        padding: 10px 10px;
+    }
+    .side-bar ul li:hover{
+        background-color: rgba(206, 240, 255, 1);
+    }
+    .side-bar ul li > img{
+        text-align: center;
+        width: 23px;
+    }
+    .side-bar .logout{
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+        padding: 10px 28px;
+    }
+    .side-bar .logout >a{
+        color: red;
+        font-size: 24px;
+    }
+
+    .sucsseful, 
+.passed{
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+.sucsseful .images,
+.passed .images{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+.sucsseful .form .main-box,
+.passed .form .main-box{
+display: flex;
+justify-content: space-between;
+text-align: end;
+/* flex-direction: column; */
+}
+.sucsseful .form .box,
+.passed .form .box{
+    text-align: start;
+}
+.sucsseful .form .number,
+.passed .form .number{
+    display: flex;
+    justify-content: space-between;
+    text-align: end;
+}
+@media (max-width: 767px){
+    .sucsseful .form .box,
+.passed .form .box,
+.sucsseful .form .box2,
+.passed .form .box2{
+    font-size: 10px;
+    /* white-space: nowrap; */
+}
+.sucsseful .images,
+.passed .images{
+   flex-direction: row;
+}
+.sucsseful .images .image,
+.passed .images .image{
+    display: inline-flex;
+}
+.sucsseful .images h2,
+.passed .images h2 {
+    font-size: 15px;
+    white-space: nowrap;
+   
+}
+.sucsseful .images img,
+.passed .images img{
+    width: 30px;
+}
+
+}
+.footer{
+  background-color: var(--main-color-footer);
+  background-color: rgba(1, 89, 147, 1);
+}
+.footer .container > a{
+  color: white;
+}
+.footer .container{
+  padding: 0px;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+
+}
+.footer .container {
+  text-align: end;
+}
+.footer .container h1{
+  font-size: 20px; 
+  color: white;
+}
+.footer .container  li{
+  margin-bottom: 10px;
+  color: white;
+}
+.footer .container li a{
+color: white;
+font-size: 16px;
+}
+.footer .container p{
+    color: white;
+}
+.footer .container .social > img{
+  display: block;
+  place-self: center;
+}
+.footer .container .social ul{
+  display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+  
+}
+.footer .container .social .facebook{
+color: white;
+}
+.footer .container .social .instgram{
+color: red;
+}
+.footer .container .social .linkedin{
+color: white;
+}
+@media (max-width: 767px) {
+    .footer .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer .container h1 {
+        font-size: 18px;
+        text-align: center; 
+    }
+
+    .footer .container ul {
+        text-align: center; 
+    }
+
+    .footer .container ul li {
+        margin-bottom: 10px;
+    }
+
+    .footer .container ul li a {
+        font-size: 16px; 
+    }
+
+    .footer .container p {
+        text-align: center; 
+    }
+
+    .footer .container .social ul {
+        justify-content: center; 
+        gap: 15px; 
+    }
+
+    .footer .container .social ul li a {
+        font-size: 20px;
+    }
+}
+</style>
+
+<body >
+    <div class="portfolio">
+        <div class="container">
+            <a href="./login.html" class="push-menu" target="_blank" >تسجيل الدخول</a>
+            <ul> 
+              <li><a href="portfolio.html">حسابي</a></li>
+                <li><a href="join.html">التسجيل</a></li>
+                <li><a href="room.html">الغرف</a></li>
+                <li><a href="index.html">الرئيسية</a></li>
+            </ul>
+       <img src="./image/logo.png">
+        </div>
+  </div>
+  <div class="container">
+    <div class="main-content">
+        <div class="sucsseful">
+            <div class="images">
+                <h2>فاتورة ناجحة</h2>
+                <div class="image">
+                    <img src="./image/mdi_tick-circle.png" alt="">
+                    <img src="./image/Button.png" alt="" class="img2">
+                </div>
+              
+            </div>
+            <div class="form">
+                <div class="main-box">
+                    <div class="box">
+                        <p>وليد</p>
+                        <p>150</p>
+                        <p>27</p>
+                        <p>visa</p>
+                        <p>01093893532</p>
+                        <p>30303030303</p>
+                    </div>
+                    <div class="box2">
+                        <p>:الاسم</p> 
+                        <p> :رقم الفاتورة </p>
+                        <p> :رقم الغرفة </p>
+                        <p> :البطاقة </p>
+                        <p>رقم الهاتف</p>
+                        <p>رقم البطاقة</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="number">
+                    <p class="move">3000 GLE</p>
+                    <p>القيمة المدفوعة</p>
+                </div>
+
+        </div>
+        </div>
+        <div class="passed">
+            <div class="images">
+                <h2>فاتورة معلقة</h2>
+                <div class="image">
+                    <img src="./image/solar_danger-circle-bold.png" alt="">
+                    <img src="./image/Button (1).png" alt="" class="img2">
+                </div>
+              
+            </div>
+            <div class="form">
+                <div class="main-box">
+                    <div class="box">
+                        <p>وليد</p>
+                        <p>150</p>
+                        <p>27</p>
+                        <p>visa</p>
+                        <p>01093893532</p>
+                        <p>30303030303</p>
+                    </div>
+                    <div class="box2">
+                        <p>:الاسم</p> 
+                        <p> :رقم الفاتورة </p>
+                        <p> :رقم الغرفة </p>
+                        <p> :البطاقة </p>
+                        <p>رقم الهاتف</p>
+                        <p>رقم البطاقة</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="number">
+                    <p class="move">3000 GLE</p>
+                    <p>القيمة المدفوعة</p>
+                </div>
+
+        </div>
+        </div>
+    </div>
+    <!-- <div class="side-bar">
+        <div class="box">
+            <h5>وليد محمود</h5>
+            <img src="./image/WhatsApp Image 2024-08-04 at 12.58.01 PM (1).jpeg" alt="">
+        </div>
+      
+    <ul>
+        <li>
+            <a href="portfolio.html">البيانات الشخصية</a>
+            <img src="./image/user-edit.png" alt="">
+        </li>
+        <li>
+            <a href="invoice.html">الفواتير</a>
+            <img src="./image/user-edit2.png" alt="">
+        </li>
+        <li>
+            <a href="#">المفضلة</a>
+            <img src="./image/heart.png" alt="">
+        </li>
+        <li>
+            <a href="#">الاشعارات</a>
+            <img src="./image/security-safe.png" alt="">
+        </li>
+        <li>
+            <a href="#">الخصوصية</a>
+            <img src="./image/security-safe2.png" alt="">
+        </li>
+        <li>
+            <a href="#">الاعدادات</a>
+            <img src="./image/mdi_cog-outline.png" alt="">
+        </li>
+        <div class="logout">
+            <a href="#"> خروج</a>
+            <img src="./image/logout.png" alt="">
+        </div>
+    </ul>
+    </div> -->
+
+<div class="side-bar" id="sideBar">
+    <div class="box">
+        <h5>وليد محمود</h5>
+        <img src="./image/WhatsApp Image 2024-08-04 at 12.58.01 PM (1).jpeg" alt="">
+    </div>
+    <ul>
+        <li>
+            <a href="portfolio.html">البيانات الشخصية</a>
+            <img src="./image/user-edit.png" alt="">
+        </li>
+        <li>
+            <a href="invoice.html">الفواتير</a>
+            <img src="./image/user-edit2.png" alt="">
+        </li>
+        <li>
+            <a href="#">المفضلة</a>
+            <img src="./image/heart.png" alt="">
+        </li>
+        <li>
+            <a href="#">الاشعارات</a>
+            <img src="./image/security-safe.png" alt="">
+        </li>
+        <li>
+            <a href="#">الخصوصية</a>
+            <img src="./image/security-safe2.png" alt="">
+        </li>
+        <li>
+            <a href="#">الاعدادات</a>
+            <img src="./image/mdi_cog-outline.png" alt="">
+        </li>
+        <div class="logout">
+            <a href="#"> خروج</a>
+            <img src="./image/logout.png" alt="">
+        </div>
+    </ul>
+</div>
+  </div>
+
+<div class="footer">
+    <div class="container">
+        <div class="communication">
+         <h1>التواصل</h1>
+         <ul>
+            <li><a href="#">جامعه الدلتا</a></li>
+            <li><a href="#">نبذه عنا</a></li>
+            <li>01040050010</li>
+            <li>Deltauniversity56@gamil.com</li>
+         </ul>
+         </div>
+        <div class="help">
+         <h1>الدعم والمساعدة</h1>
+         <ul>
+            <li><a href="#">الدعم الفني</a></li>
+            <li><a href="#">دليل السكن</a></li>
+            <li><a href="#">الشروط والأحكام</a></li>
+            <li><a href="#">سياسه الخصوصية</a></li>
+         </ul>
+         </div>
+        <div class="page">
+         <h1>الصفحات</h1>
+         <ul>
+            <li><a href="index.html">الرئيسية </a></li>
+            <li><a href="#">التسجيل </a></li>
+            <li><a href="room.html">الغرف </a></li>
+            <li><a href="portfolio.html">الحساب الشخصي</a></li>
+         </ul>
+         </div>
+         <div class="social">
+            <img src="./image/logo.png" alt="" width="100px">
+            <p>ابحث عن مكان اقامتك المثالي </p>
+            <ul>
+                <li>
+                    <a href="#" class="instgram">
+                        <i class="fa-brands fa-instagram"></i>
+                     </a>
+                     </li>
+                <li>
+                    <a href="#" class="facebook">
+                        <i class="fa-brands fa-facebook"></i>
+                     </a>
+                     </li>
+                     <li>
+                        <a href="#" class="linkedin">
+                            <i class="fa-brands fa-linkedin"></i>
+                         </a>
+                        </li>
+            </ul>
+         </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('click', (event) => {
+    if (!sideBar.contains(event.target) && !menuIcon.contains(event.target)) {
+        sideBar.classList.remove('active'); // إغلاق الـ side-bar
+    }
+})
+// اختيار العناصر
+const menuIcon = document.getElementById('menuIcon');
+const sideBar = document.getElementById('sideBar');
+
+// إضافة حدث النقر على أيقونة القائمة
+menuIcon.addEventListener('click', () => {
+    sideBar.classList.toggle('active'); // تبديل الكلاس "active"
+});;
+    </script>
+</body>
+</html>

@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROOM</title>
+    <!-- <link rel="stylesheet" href="css/normalize.css" /> -->
+    <!-- <link rel="stylesheet" href="css/home.css"/> -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="./webfonts/">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap" rel="stylesheet" />
+</head>
+<body style="background-color: rgba(242, 250, 255, 1)";>
+    <style>
+        * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  :root {
+    --main-color: #2196f3;
+    --main-color-alt: #1787e0;
+    --main-transition: 0.3s;
+    --main-padding-top: 100px;
+    --main-padding-bottom: 100px;
+    --section-background: #ececec;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: "Cairo", sans-serif;
+  }
+  a {
+    text-decoration: none;
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  body, html {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    margin: 0 auto; /* توسيط الحاوية */
+  }
+  .container {
+    /* padding-left: 15px;
+    padding-right: 15px; */
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* Small */
+@media (min-width: 768px) {
+    .container {
+      width: 750px;
+    }
+  }
+  /* Medium */
+  @media (min-width: 992px) {
+    .container {
+      width: 970px;
+    }
+  }
+  /* Large */
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+  }
+  /* End Global Rules */
+  .room-me .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px
+  }
+  .room-me .container ul{
+    display: flex;
+    gap: 54px;
+  }
+
+  @media (max-width: 767px){
+    .room-me .container ul{
+      gap: 24px;
+      margin-left: 7px;
+    }
+  }
+  .room-me .container ul li a{
+    color: black;
+  }
+  .room-me .container ul li a.active{
+    color: #1787e0;
+    border-bottom: 1px solid blue;
+  }
+  .room-me .container ul li a:hover{
+    border-bottom: 1px solid blue;
+    color: #1787e0;
+  }
+  .room-me .container  .push-menu{
+    background-color: rgba(23, 92, 211, 1);
+    border-radius: 11px;
+    padding: 10px;
+    color: wheat;
+    width: 155px;
+    text-align: center;
+  }
+  .info {
+    padding-top: 50px;
+}
+
+.info .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+  .info .container .image img{
+width: 500px;
+height: 400px;
+  }
+  @media (max-width: 767px) {
+    .info .container .image img {
+        display: none;
+    }
+}
+  .info .container .text{
+text-align: end;
+  }
+  .info .container .text h2{
+    font-size: 35px;
+  }
+  .info .container .text h2 span{
+    color: rgba(1, 89, 147, 1);
+  }
+  .info .container .text p{
+    font-size: 24px;
+    color: rgba(74, 75, 75, 1);
+  }
+  .info .container .text .icons{
+    display: flex;
+  justify-content: space-around;
+  }
+  .info .container .text .go {
+     background-color: blue;
+     color: white;
+     width: 137px;
+     border-radius: 12px;
+     margin-bottom: 16px;
+     position: relative;
+     padding: 7px;
+     justify-self: self-end;
+     margin-top: 24px;
+     text-align: center;
+}
+  .info .container .text .go a{
+    color: white;
+    position: relative;
+    left: 7px;
+}
+  .info .container .text .go .logo{
+    position: absolute;
+    left: 5px;
+    align-self: anchor-center;
+    animation: moving-arrow 1s linear infinite;
+  }
+  @media (max-width: 767px) {
+    .info .container {
+        padding: 10px;
+    }
+  }
+  .best {
+padding-bottom: 50px;
+  }
+  .best .container{
+position: relative;
+  }
+  .best h3{
+text-align: center;
+font-size: 35px;
+  }
+  .best p{
+color: rgba(74, 75, 75, 1);
+font-size: 24px;
+text-align: center;
+  }
+  .best .container .images{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+  .best .container .images .image{
+position: relative;
+  }
+  .best .container .images .image .icons{
+    width: 180px;
+    height: 190px;
+  }
+  @media (max-width: 767px) {
+    .best .container .images .image .icons {
+        width: 120px;
+        height: 120px;
+    }
+  }
+  .best .container .images .image .styles{
+    position: absolute;
+    right: -12px;
+    top: -11px;
+  }
+  /* end best */
+  .place{
+position: relative;
+padding-bottom: 50px;
+  }
+  .place .container {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 50px;
+    
+}
+.place > h2{
+  text-align: center;
+  font-size: 36px;
+}
+.place  > p{
+  text-align: center;
+  font-size: 20px;
+  color: rgba(74, 75, 75, 1);
+}
+.place .container .filter {
+  padding: 20px;
+    background-color : rgba(255, 255, 255, 1);
+    height: 900px;
+    width: 250px;
+    border-radius: 15px;
+    text-align: end;
+}
+.place .container .filter .title{
+display: flex;
+justify-content: space-around;
+gap: 20px;
+}
+.place .container .filter .title > img{
+  width: 24px;
+  height: 24px;
+  position: relative;
+  bottom: -24px;
+}
+.place .container .filter .maps h5{
+font-size: 17px;
+}
+.place .container .filter .maps label{
+color: rgba(74, 75, 75, 1);
+}
+.place .container .filter .money h5{
+font-size: 17px;
+}
+.place .container .filter .money span{
+  background-color: rgba(16, 24, 40, 0.05);
+  border-radius: 10px;
+  padding: 2px;
+}
+.place .container .filter .times label{
+color: rgba(74, 75, 75, 1);
+}
+.place .container .filter .checked h5{
+  font-size: 17px;
+}
+.place .container .filter .checked label{
+ color:  rgba(74, 75, 75, 1);
+}
+.place .container .filter .see-more h5{
+  font-size: 17px;
+}
+.place .container .filter .see-more label{
+  color: rgba(74, 75, 75, 1);
+}
+.place .container .filter .see-more > a{
+  background-color: rgba(1, 89, 147, 1);
+  color: white;
+  border-radius: 11px;
+  display: block;
+  margin-top: 16px;
+  max-width: fit-content;
+  margin: 2px;
+  padding: 6px;
+  margin-inline-start: auto;
+}
+.place .container .image-room {
+    flex: 3;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+.place .container .image-room .box{
+  background-color : rgba(255, 255, 255, 1);
+  border-radius: 15px;
+  position: relative;
+  width: 295px;
+}
+.place .container .image-room .box img{
+padding: 15px;
+}
+.place .container .image-room .box .heart{
+  position: absolute;
+  right: 0px;
+  top: 0px;
+
+}
+.place .container .image-room .box .info{
+  display: flex;
+  justify-content: space-between;
+      padding: 4px;
+      margin-right: 10px;
+}
+.place .container .image-room .box .info .number{
+  color: rgba(1, 89, 147, 1);
+  font-size: 19px;
+}
+.place .container .image-room .box > P{
+  text-align: end;
+  padding: 5px;
+  margin-right: 10px;
+  color: rgba(74, 75, 75, 1);
+}
+.place .container .image-room .box .info p{
+
+}
+.place .container .image-room .box .info span{
+}
+.place .container .image-room .box .price{
+  display: flex;
+      justify-self: self-end;
+      background-color: rgba(242, 250, 255, 1);
+      border-radius: 32px;
+      padding: 2px;
+      margin-right: 10px;
+}
+.place .container .image-room .box .price > p{
+  color: rgba(74, 75, 75, 1);
+  margin-right: -10px;
+  margin-top: 7px;
+}
+.place .container .image-room .box .price > img{
+  height: 49px;
+}
+.place .container .image-room .box .go{
+  display: block;
+  background-color: blue;
+  color: white;
+  margin-left: 9px;
+  text-align: center;
+  width: 137px;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  padding: 5px;
+}
+.place .container .image-room .go > a{
+  color: white;
+  position: relative;
+  left: 7px;
+}
+.place .container .image-room .go .logo{
+  position: absolute;
+    left: 5px;
+    bottom: 12px;
+    animation: moving-arrow 1s linear infinite;
+}
+.place .container .image-room .go .logoe{
+  position: absolute;
+  left: 5px;
+  bottom: 21px;
+  animation: moving-arrow 1s linear infinite;
+}
+.place .show-more{
+  text-align: center;
+  position: relative;
+}
+
+.place .show-more a{
+color: rgba(1, 89, 147, 1);
+}
+.place .show-more img{
+
+}
+@media (max-width: 767px) {
+    .place .container {
+        display: block; 
+        padding: 0 15px; 
+    }
+
+    .place .container .filter,
+    .place .container .image-room {
+        width: 100%; 
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .place .container .image-room {
+        display: grid;
+        grid-template-columns: 1fr; 
+        gap: 20px; 
+    }
+
+    .place .container .image-room .box {
+        width: 100%; 
+        text-align: center;
+    }
+    .place .container .filter .see-more > a {
+        margin: 10px auto;
+    }
+    .place .container .image-room .go .logoe {
+        bottom: 15px;
+    }
+}
+        .footer{
+  background-color: var(--main-color-footer);
+  background-color: rgba(1, 89, 147, 1);
+}
+.footer .container > a{
+  color: white;
+}
+.footer .container{
+  padding: 0px;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+
+}
+.footer .container {
+  text-align: end;
+}
+.footer .container h1{
+  font-size: 20px; 
+  color: white;
+}
+.footer .container  li{
+  margin-bottom: 10px;
+  color: white;
+}
+.footer .container li a{
+color: white;
+font-size: 16px;
+}
+.footer .container p{
+    color: white;
+}
+.footer .container .social > img{
+  display: block;
+  place-self: center;
+}
+.footer .container .social ul{
+  display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+  
+}
+.footer .container .social .facebook{
+color: white;
+}
+.footer .container .social .instgram{
+color: red;
+}
+.footer .container .social .linkedin{
+color: white;
+}
+@media (max-width: 767px) {
+    .footer .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    }
+
+    .footer .container h1 {
+        font-size: 18px;
+        text-align: center; 
+    }
+
+    .footer .container ul {
+        text-align: center; 
+    }
+
+    .footer .container ul li {
+        margin-bottom: 10px;
+    }
+
+    .footer .container ul li a {
+        font-size: 16px; 
+    }
+
+    .footer .container p {
+        text-align: center; 
+    }
+
+    .footer .container .social ul {
+        justify-content: center; 
+        gap: 15px; 
+    }
+
+    .footer .container .social ul li a {
+        font-size: 20px;
+    }
+    
+@keyframes moving-arrow {
+    100% {
+      transform: translateX(10px);
+    }
+  }
+    </style>
+    <div class="room-me">
+        <div class="container">
+            <a href="./login.html" class="push-menu" target="_blank">تسجيل الدخول</a>
+            <ul> 
+                <li><a href="portfolio.html">حسابي</a></li>
+                <li><a href="join.html">التسجيل</a></li>
+                <li><a href="room.html" class="active">الغرف</a></li>
+                <li><a href="index.html">الرئيسية</a></li>
+            </ul>
+           <img src="./image/logo.png">
+        </div>
+    </div>
+    <div class="info">
+        <div class="container">
+            <div class="image">
+                <img src="./image/banner.png" alt="">
+            </div>
+            <div class="text">
+                <h2>
+                    استكشف  <span> غرف مريحة</span> مصممة
+                    <br>
+                    لتلبية احتياجاتك
+                </h2>
+                <p>
+                    غرف مريحة ومضيئة تحتوي على أثاث حديث، ومساحات تخزين 
+                    <br>
+                    وجميع وسائل الراحة التي تحتاجها لإقامة مريحة
+                </p>
+                <div class="icons">
+                    <img src="./image/item.png" alt="">
+                    <img src="./image/item (1).png" alt="">
+                    <img src="./image/item (2).png" alt="">
+                    <img src="./image/item (3).png" alt="">
+                </div>
+                <div class="go">
+                    <a href="#">عرض المزيد</a>
+                    <img src="./image/Vector.png" alt="" class="logo">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="best">
+        <div class="container">
+            <h3>
+                أفضل الخدمات لإقامتك
+            </h3>
+            <p>
+                خدمات أساسية مصممة لتوفير تجربة أكثر راحة وسهولة
+            </p>
+            <div class="images">
+                <div class="image">
+                    <img src="./image/service 1.png" alt="" class="icons">
+                    <img src="./image/Group.png" alt="" class="styles">
+                </div>
+                <div class="image">
+                    <img src="./image/service 2.png" alt="" class="icons">
+                    <img src="./image/Group.png" alt="" class="styles">
+                </div>
+                <div class="image">
+                    <img src="./image/service 3.png" alt="" class="icons">
+                    <img src="./image/Group.png" alt="" class="styles">
+                </div>
+                <div class="image">
+                    <img src="./image/service 4.png" alt="" class="icons">
+                    <img src="./image/Group.png" alt="" class="styles">
+                </div>
+                <div class="image">
+                    <img src="./image/service 5.png" alt="" class="icons">
+                    <img src="./image/Group.png" alt="" class="styles">
+                </div>
+                <div class="image">
+                    <img src="./image/service 6.png" alt="" class="icons">
+                    <img src="./image/Group.png" alt="" class="styles">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="place">
+        <h2>اكتشف مساحتك المثالية</h2>
+        <p>استكشف الغرف المجهزة بمرافق متنوعة مصممة لتلبية احتياجاتك وتفضيلاتك</p>
+        <div class="container">
+            <div class="image-room">
+                <div class="box">
+                    <img src="./image/Private room. Perfect for personal comfort.png" alt="">
+                    <img src="./image/Icon button.png" alt="" class="heart">
+                    <div class="info">
+                        <span class="number" >1000 EGB</span>
+                        <span >غرفة فردية مريحة</span>
+                    </div>
+                    <p>غرفة خاصة مثالية للراحة الشخصية</p>
+                    <div class="price">
+                        <p>تشمل الفواتير</p>
+                        <img src="./image/building-storefront.png" alt="">
+                    </div>
+                    <div class="go">
+                        <a href="./p-room.html">عرض المزيد</a>
+                        <img src="./image/Vector.png" alt="" class="logo">
+                    </div>
+                   
+                </div>
+
+                <div class="box">
+                    <img src="./image/Group 1000002284.png" alt="">
+                    <img src="./image/Icon button.png" alt="" class="heart">
+                    <div class="info">
+                        <span class="number" >1200 EGB</span>
+                        <span >غرفة مزودة مريحة</span>
+                       
+                    </div>
+                    <p>غرفة مشتركة لاثنين ذات خصوصية</p>
+                    <div class="price">
+                        <p>تشمل الفواتير</p>
+                        <img src="./image/building-storefront.png" alt="">
+                    </div>
+                    <div class="go">
+                        <a href="#">عرض المزيد</a>
+                        <img src="./image/Vector.png" alt="" class="logo">
+                    </div>
+                </div>
+
+                <div class="box">
+                    <img src="./image/Group 1000002284 (1).png" alt="">
+                    <img src="./image/Icon button (1).png" alt="" class="heart">
+                    <div class="info">
+                        <span class="number" >1700 EGB</span>
+                        <span >غرفة  مشتركة اقتصادية</span>
+                        
+                    </div>
+                    <p>غرفة مع مجموعة اصدقاء اقتصادية</p>
+                    <div class="price">
+                        <p>تشمل الفواتير</p>
+                        <img src="./image/building-storefront.png" alt="">
+                    </div>
+                    <div class="go">
+                        <a href="#">عرض المزيد</a>
+                        <img src="./image/Vector.png" alt="" class="logo">
+                    </div>
+                </div>
+
+                <div class="box">
+                    <img src="./image/Group 1000002285 (1).png" alt="">
+                    <img src="./image/fluent-emoji-flat_locked.png" alt="" class="heart">
+                    <div class="info">
+                        <span  class="number">2100 EGB</span>
+                        <span >غرفة سوبر حديثة</span>
+                     
+                    </div>
+                    <p>غرفة فاخرة مزودة بكافة المرافق</p>
+                    <div class="price">
+                        <p>تشمل الفواتير</p>
+                        <img src="./image/building-storefront.png" alt="">
+                    </div>
+                    <div class="go">
+                        <a href="#">عرض المزيد</a>
+                        <img src="./image/Vector.png" alt="" class="logo">
+                    </div>
+                </div>
+
+                <div class="box">
+                    <img src="./image/Group 1000002284 (2).png" alt="">
+                    <img src="./image/Icon button.png" alt="" class="heart">
+                    <div class="info">
+                        <span class="number" >1400 EGB</span>
+                        <span >غرفة منفردة صغيرة</span>
+                       
+                    </div>
+                    <p>غرفة بسيطة مثالية  للطلاب</p>
+                    <div class="price">
+                        <p>تشمل الفواتير</p>
+                        <img src="./image/building-storefront.png" alt="">
+                    </div>
+                    <div class="go">
+                        <a href="#">عرض المزيد</a>
+                        <img src="./image/Vector.png" alt="" class="logoe">
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="./image/Group 1000002285.png" alt="">
+                    <img src="./image/Icon button.png" alt="" class="heart">
+                    <div class="info">
+                        <span class="number">1900 EGB</span>
+                        <span >غرفة مشتركة </span>
+                    </div>
+                    <p>غرفة مشتركة - مناسبة للأصدقاء </p>
+                    <div class="price">
+                        <p>تشمل الفواتير</p>
+                        <img src="./image/building-storefront.png" alt="">
+                    </div>
+                    <div class="go">
+                        <a href="#">عرض المزيد</a>
+                        <img src="./image/Vector.png" alt="" class="logoe">
+                    </div>
+                </div>
+            </div>
+            <div class="filter">
+                <div class="title">
+                    <img src="./image/filter vec.png" alt="">
+                    <h3>فلتر البحث</h3>
+                    
+                </div>
+                <div class="maps">
+                    <h5>الموقع</h5>
+                    <label for="location1">حي الجامعة</label>
+                    <input type="checkbox" id="location1" name="location" value="حي الجامعة" onclick="onlyOne(this)">
+                    <br>
+                    <label for="location2">الحرم الجامعي</label>
+                    <input type="checkbox" id="location2" name="location" value="الحرم الجامعي" onclick="onlyOne(this)">
+                </div>
+                <div class="money">
+                    <h5>الميزانية</h5>
+                    <span>الحد الادني</span>
+                    <span> الحد الاقصي</span>
+                </div>
+                <div class="times">
+                    
+                <input type="date" placeholder="من" value="date">
+                <label for="date">من</label>
+                <br>
+                
+                <input type="date" placeholder="الي" value="date">
+                <label for="date">الي</label>
+                </div>
+                <div class="checked">
+                    <h5>نوع الغرفة</h5>
+                    <label for="room1">غرفة فردية </label>
+                    <input type="checkbox" id="alone" name="room" value=" غرفة فردية" onclick="onlyOne(this)">
+                   
+                    <br>
+                    <label for="room2"> غرفة مزدوجة</label>
+                    <input type="checkbox" id="double" name="room" value="غرفة مزدوجة " onclick="onlyOne(this)">
+                   
+                    <br>
+                    <label for="room3"> غرفة مشتركة</label>
+                    <input type="checkbox" id="popular" name="room" value="غرفة مشتركة " onclick="onlyOne(this)">
+                    
+                </div>
+                <div class="see-more">
+                    <h5>الخدمات والمرافق</h5>
+                    <label for="air">مكيف هواء</label>
+                    <input type="checkbox" id="air" name="air" value="مكيف هواء">
+                  
+                    <br>
+                    <label for="air"> خزانة ملابس</label>
+                    <input type="checkbox" id="air" name="air" value="خزانة ملابس">
+                   
+                    <br>
+                    <label for="air">مكتب دراسة</label>
+                    <input type="checkbox" id="air" name="air" value="مكتب دراسة">
+                   
+                    <br>
+                    <label for="air">تليفزيون </label>
+                    <input type="checkbox" id="air" name="air" value="تليفزيون ">
+                  
+                    <br>
+                    <label for="air"> بلايستيشن</label>
+                    <input type="checkbox" id="air" name="air" value="بلايستيشن ">
+                  
+                    <br>
+                    <a href="#">عرض المزيد</a>
+                    <img src="./image/Vector (Stroke).png" alt="">
+                </div>
+            </div>
+            <div class="show-more">
+                <a href="#">عرض المزيد</a>
+                <img src="./image/Vector blue.png.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container">
+            <div class="communication">
+             <h1>التواصل</h1>
+             <ul>
+                <li><a href="#">جامعه الدلتا</a></li>
+                <li><a href="#">نبذه عنا</a></li>
+                <li>01040050010</li>
+                <li>Deltauniversity56@gamil.com</li>
+             </ul>
+             </div>
+            <div class="help">
+             <h1>الدعم والمساعدة</h1>
+             <ul>
+                <li><a href="#">الدعم الفني</a></li>
+                <li><a href="#">دليل السكن</a></li>
+                <li><a href="#">الشروط والأحكام</a></li>
+                <li><a href="#">سياسه الخصوصية</a></li>
+             </ul>
+             </div>
+            <div class="page">
+             <h1>الصفحات</h1>
+             <ul>
+                <li><a href="index.html">الرئيسية </a></li>
+                <li><a href="join.html">التسجيل </a></li>
+                <li><a href="room.html">الغرف </a></li>
+                <li><a href="portfolio.html">الحساب الشخصي</a></li>
+             </ul>
+             </div>
+             <div class="social">
+                <img src="./image/logo.png" alt="" width="100px">
+                <p>ابحث عن مكان اقامتك المثالي </p>
+                <ul>
+                    <li>
+                        <a href="#" class="instgram">
+                            <i class="fa-brands fa-instagram"></i>
+                         </a>
+                         </li>
+                    <li>
+                        <a href="#" class="facebook">
+                            <i class="fa-brands fa-facebook"></i>
+                         </a>
+                         </li>
+                         <li>
+                            <a href="#" class="linkedin">
+                                <i class="fa-brands fa-linkedin"></i>
+                             </a>
+                            </li>
+                </ul>
+             </div>
+            </div>
+        </div>
+
+    <script>
+    function onlyOne(checkbox) {
+        var checkboxes = document.getElementsByName('location');
+        checkboxes.forEach((item) => {
+            if (item !== checkbox) item.checked = false;
+        });
+
+        var checkboxes = document.getElementsByName('room');
+        checkboxes.forEach((item) => {
+            if (item !== checkbox) item.checked = false;
+        });
+    }
+    </script>
+</body>
+</html>

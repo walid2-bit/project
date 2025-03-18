@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <!-- <link rel="stylesheet" href="css/normalize.css" /> -->
+    <!-- <link rel="stylesheet" href="css/home.css"/> -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="./webfonts/">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&#038;display=swap" rel="stylesheet" />
+</head>
+<body style="background-color: rgba(242, 250, 255, 1)";>
+    <style>
+        * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  :root {
+    --main-color: #2196f3;
+    --main-color-alt: #1787e0;
+    --main-transition: 0.3s;
+    --main-padding-top: 100px;
+    --main-padding-bottom: 100px;
+    --section-background: #ececec;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: "Cairo", sans-serif;
+  }
+  a {
+    text-decoration: none;
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  body, html {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    margin: 0 auto; /* توسيط الحاوية */
+  }
+  .container {
+    /* padding-left: 15px;
+    padding-right: 15px; */
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* Small */
+@media (min-width: 768px) {
+    .container {
+      width: 750px;
+    }
+  }
+  /* Medium */
+  @media (min-width: 992px) {
+    .container {
+      width: 970px;
+    }
+  }
+  /* Large */
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+  }
+  /* End Global Rules */
+        .about-me{
+  height: auto;
+}
+.about-me .container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px
+}
+.about-me .container ul{
+  display: flex;
+  gap: 54px;
+}
+@media (max-width: 767px){
+  .about-me .container ul{
+    gap: 24px;
+    margin-left: 7px;
+  }
+}
+.about-me .container ul li a{
+  color: black;
+}
+.about-me .container ul li a:hover{
+  border-bottom: 1px solid blue;
+  color: #1787e0;
+}
+.about-me .container  .push-menu{
+  background-color: rgba(23, 92, 211, 1);
+  border-radius: 11px;
+  padding: 10px;
+  color: wheat;
+  width: 155px;
+  text-align: center;
+}
+/* end tiitle */
+
+.abouts-us{
+padding-bottom: 25px;
+background-color: rgba(255, 255, 255, 1);
+}
+.abouts-us .container{
+
+}
+ .abouts-us .container h4{
+  text-align: center;
+  font-size: 26px;
+}
+.abouts-us .container p{
+  place-self: center;
+  text-align: end;
+  font-size: 30px;
+}
+.void{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.completion{
+  background-color: rgba(255, 255, 255, 1);
+  padding-bottom: 50px;
+  margin-bottom: 20px;
+}
+.completion .container{
+  margin-top: 20px;
+  padding-top: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.completion .container .image {
+}
+.completion .container .text p{
+  font-size: 30px;
+  text-align: end;
+}
+.completion .container .text h3{
+  text-align: end;
+  font-size: 28px;
+}
+.popular{
+
+}
+.popular .container .box{
+  display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin-top: 50px;
+      /* background-color: rgba(46, 66, 165, 0.1); */
+      width: 100%;
+      padding: 17px;
+}
+.popular .container .number{
+  display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+}
+@media (max-width: 767px){
+  .abouts-us .container p{
+    font-size: 18px;
+  }
+  .completion .container .image img{
+    display: none;
+  }
+  .completion .container .text p{
+    font-size: 18px;
+    text-align: center;
+  }
+  .popular{
+    margin-top: -78px;
+  }
+  .completion .container .text h3{
+    text-align: center;
+  }
+  }
+/* end .completion */
+.help-you{
+  background-color: rgba(255, 255, 255, 1);
+  padding-bottom: 50px;
+  margin-bottom: 15px;
+}
+.help-you .container{
+
+}
+.help-you .container h3{
+  text-align: center;
+  font-size: 24px;
+}
+.help-you .container p {
+  text-align: center;
+  color: rgba(74, 75, 75, 1);
+}
+
+.help-you .container .form{
+  display: flex;
+      justify-content: center;
+      gap: 28px;
+      flex-direction: row-reverse;
+      flex-wrap: wrap;
+    }
+    .help-you .container .form > input{
+      padding: 12px;
+      border-radius: 13px;
+      text-align: end;
+      font-size: 19px;
+      border: 1px solid rgba(210, 210, 210, 1);
+  }
+  .help-you .container .form > input::placeholder{
+    font-size: 20px;
+  }
+  .help-you .container .form > input:focus{
+    outline: none;
+  }
+  .help-you .container .form > a{
+    background-color: rgba(1, 89, 147, 1);
+    color: white;
+    padding: 11px;
+    border-radius: 14px;
+    text-align: center;
+  }
+  @media (max-width: 767px) {
+    .help-you .container .form{
+      display: flex;
+          justify-content: center;
+          gap: 28px;
+          flex-wrap: wrap;
+          flex-direction: column;
+      }
+    }
+.footer{
+  background-color: var(--main-color-footer);
+  background-color: rgba(1, 89, 147, 1);
+}
+.footer .container > a{
+  color: white;
+}
+.footer .container{
+  padding: 0px;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+
+}
+.footer .container {
+  text-align: end;
+}
+.footer .container h1{
+  font-size: 20px; 
+  color: white;
+}
+.footer .container  li{
+  margin-bottom: 10px;
+  color: white;
+}
+.footer .container li a{
+color: white;
+font-size: 16px;
+}
+.footer .container p{
+    color: white;
+}
+.footer .container .social > img{
+  display: block;
+  place-self: center;
+}
+.footer .container .social ul{
+  display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+  
+}
+.footer .container .social .facebook{
+color: white;
+}
+.footer .container .social .instgram{
+color: red;
+}
+.footer .container .social .linkedin{
+color: white;
+}
+@media (max-width: 767px) {
+    .footer .container {
+        flex-direction: column; 
+    }
+
+    .footer .container h1 {
+        font-size: 18px;
+        text-align: center; 
+    }
+
+    .footer .container ul {
+        text-align: center; 
+    }
+
+    .footer .container ul li {
+        margin-bottom: 10px;
+    }
+
+    .footer .container ul li a {
+        font-size: 16px; 
+    }
+
+    .footer .container p {
+        text-align: center; 
+    }
+
+    .footer .container .social ul {
+        justify-content: center; 
+        gap: 15px; 
+    }
+
+    .footer .container .social ul li a {
+        font-size: 20px;
+    }
+}
+    </style>
+    <div class="about-me">
+            <div class="container">
+                <a href="./login.html" class="push-menu" target="_blank" >تسجيل الدخول</a>
+                <ul> 
+                  <li><a href="portfolio.html">حسابي</a></li>
+                    <li><a href="join.html">التسجيل</a></li>
+                    <li><a href="room.html">الغرف</a></li>
+                    <li><a href="index.html">الرئيسية</a></li>
+                </ul>
+            <a href="#" class="logo"><img src="./image/logo.png"></a>
+            </div>
+        </div>
+            <div class="abouts-us">
+                <div class="container">
+                    <h4>من نحن؟</h4>
+                    <p>
+                          نحن منصة سكنية متخصصة في توفير بيئة جامعية آمنة ومريحة للطلاب. نقدم حلول سكنية مرنة 
+                        <br>
+                         تناسب احتياجات الطلاب الأكاديمية والحياتية، مع توفير خدمات متميزة تسهم في راحتهم       
+                         <br>
+                         ورفاهيتهم. نعمل على تسهيل اختيار السكن وتوفير كافة المرافق التي تساعد الطلاب على التكيف 
+                         <br>
+                         مع حياتهم الجامعية بكل سهولة
+                        </p>
+                </div>
+            </div>
+            <!-- end about -->
+             <div class="completion">
+                <div class="container">
+                    <div class="image">
+                     <img src="./image/Group 237462.png" alt="">
+                    </div>
+                    <div class="text">
+                        <h3>! انجازاتنا</h3>
+                    <p>
+                        تمكنا من تقديم سكن مريح وآمن لآلاف الطلاب،
+                         مع توفير غرف مجهزة بأعلى المعايير. بفضل التقييمات الإيجابية من الطلاب،
+                              توسعنا في تقديم خدمات إضافية مثل الإنترنت السريع، خدمات التنظيف،
+                    والصيانة الدورية، مما جعلنا وجهة موثوقة للطلاب الباحثين عن سكن جامعي متميز
+                    </p>
+                    </div>
+                </div>
+           
+             <div class="popular">
+                <div class="container">
+                <div class="box">
+                    <div>
+                        <span class="number">90%</span>
+                        <span class="text">نسبه رضا الطلاب</span>
+                    </div>
+                    <div>
+                        <span class="number">+120</span>
+                        <span class="text">غرفه محجوزة</span>
+                    </div>
+                    <div>
+                        <span class="number">+500</span>
+                        <span class="text">ايام الاقامه</span>
+                    </div>
+                    <div>
+                        <span class="number">+365</span>
+                        <span class="text">غرف مؤجرة</span>
+                    </div>
+                </div>
+            </div>
+             </div>
+            </div>
+            <div class="void">
+                    <img src="./image/review.png" alt="" width="100%">
+            </div>
+            <div class="help-you">
+                <div class="container">
+                    <h3>هل تحتاج الي مساعدة ؟</h3>
+                    <p>تواصل معنا بكل سهوله</p>
+                    <div class="form">
+                        <input type="text" placeholder="ادخل اسمك" name="name">
+                        <input type="text" placeholder="اكتب استفسارك" name="text">
+                        <a href="#" >تواصل معنا</a>
+                    </div>
+                </div>
+            </div>
+            <!-- end help -->
+
+            <div class="footer">
+                <div class="container">
+                    <div class="communication">
+                     <h1>التواصل</h1>
+                     <ul>
+                        <li><a href="#">جامعه الدلتا</a></li>
+                        <li><a href="#">نبذه عنا</a></li>
+                        <li>01040050010</li>
+                        <li>Deltauniversity56@gamil.com</li>
+                     </ul>
+                     </div>
+                    <div class="help">
+                     <h1>الدعم والمساعدة</h1>
+                     <ul>
+                        <li><a href="#">الدعم الفني</a></li>
+                        <li><a href="#">دليل السكن</a></li>
+                        <li><a href="#">الشروط والأحكام</a></li>
+                        <li><a href="#">سياسه الخصوصية</a></li>
+                     </ul>
+                     </div>
+                    <div class="page">
+                     <h1>الصفحات</h1>
+                     <ul>
+                        <li><a href="index.html">الرئيسية </a></li>
+                        <li><a href="#">التسجيل </a></li>
+                        <li><a href="room.html">الغرف </a></li>
+                        <li><a href="portfolio.html">الحساب الشخصي</a></li>
+                     </ul>
+                     </div>
+                     <div class="social">
+                        <img src="./image/logo.png" alt="" width="100px">
+                        <p>ابحث عن مكان اقامتك المثالي </p>
+                        <ul>
+                            <li>
+                                <a href="#" class="instgram">
+                                    <i class="fa-brands fa-instagram"></i>
+                                 </a>
+                                 </li>
+                            <li>
+                                <a href="#" class="facebook">
+                                    <i class="fa-brands fa-facebook"></i>
+                                 </a>
+                                 </li>
+                                 <li>
+                                    <a href="#" class="linkedin">
+                                        <i class="fa-brands fa-linkedin"></i>
+                                     </a>
+                                    </li>
+                        </ul>
+                     </div>
+                    </div>
+                </div>
+</body>
+</html>

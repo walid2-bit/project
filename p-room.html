@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>rooms</title>
+        <!--Font Awesome-->
+        <link rel="stylesheet" href="css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+        <!--Google Font-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900;1000&amp;display=swap" rel="stylesheet">
+        <style>
+              * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  :root {
+    --main-color:#015993;
+    --main-color-alt: #0295D700;
+    --main-transition: 0.3s;
+    --main-padding-top: 100px;
+    --main-padding-bottom: 100px;
+    --section-background: #ececec;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: "Cairo", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F2FAFF;
+  }
+  a {
+    text-decoration: none;
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+  }
+    /* Small */
+@media (min-width: 768px) {
+    .container {
+      width: 750px;
+    }
+  }
+  /* Medium */
+  @media (min-width: 992px) {
+    .container {
+      width: 970px;
+    }
+  }
+  /* Large */
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+  }
+  /*start header*/
+  .header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header .container ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    }
+    .header .container .push-menu{
+    background-color: var(--main-color);
+    border-radius: 11px;
+    padding: 10px;
+    color: white;
+    width: 155px;
+    text-align: center;
+    }
+    .header .container ul li .a{
+        color: black;
+        padding: 10px;
+    }
+    .header .container ul li .a:hover{
+        color: #0295D7;
+        border-bottom: 2px solid #0295D7;
+    }
+    .active{
+        color: #0295D7;
+        border-bottom: 2px solid #0295D7;
+        padding: 10px;
+    }
+    /*End Header*/
+    .end-head .container{
+        font-size: 14px;
+        display: flex;
+        justify-content: end;
+        letter-spacing: 1px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .end-head .container .end{
+        color: #0295D7;
+    }
+    /*Start Image*/
+    .image .container{
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+    }
+    .image .container .box2{
+        width: 400px;
+    }
+    /*End Image*/
+    /*Start Center*/
+    .center{
+        padding-top: 10px;
+        padding-bottom: 30px;
+    }
+    .center .container{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 50px;
+    }
+    .center .container .text{
+        width: 50%;
+        text-align: right;
+    }
+    .center .container .text p{
+        color: #4A4B4B;
+    }
+    .center .container .icons{
+        width: 43%;
+        text-align: right;
+        margin-top: 40px;
+    }
+    .center .container .icons .image-icon{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: flex-end;
+    }
+    .center .container .icons p{
+        font-size: 20px;
+        font-weight: bold;
+        color: var(--main-color);
+    }
+    .center .go{
+        display: table;
+        background-color: var(--main-color);
+        color: white;
+        margin: 10px auto;
+        border-radius: 11px;
+        text-align: center;
+        padding: 10px 115px;
+    }
+    /*Start Rooms*/
+    .rooms{
+        margin-bottom: 50px;
+    }
+    .rooms .container{
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .rooms .container .box{
+        background-color: white;
+        padding: 15px 10px;
+        border-radius: 10px;
+        /* width: 23%; */
+        box-shadow: 2px 2px 2px 2px rgba(69, 161, 77, 0.2);
+        margin-bottom: 5px;
+    }
+    .rooms .container .box img{
+        width: -webkit-fill-available;
+    }
+    .rooms .container .box .text{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+    .rooms .container .box .text .price{
+        color: #0295D7;
+    }
+    .rooms .container .box .go-rooms{
+        position: relative;
+        margin-bottom: 10px;
+    }
+    .rooms .container .box .go-rooms a{
+        padding: 5px 20px;
+        background-color: var(--main-color);
+        color: white;
+        font-weight: bold;
+        border-radius: 10px;
+        padding-left: 50px;
+    }
+    .rooms .container .box .go-rooms img{
+        position: absolute;
+        width: 20px;
+        left: 5px;
+        top: 6px;
+    }
+    .rooms .head{
+    text-align: right;
+    font-size: 20px;
+    margin-right: 126px;
+    font-weight: bold;
+    }
+    /*End Rooms*/
+    /*Start Footer*/
+    .footer{
+    background-color: var(--main-color);
+    color: white;
+    }
+    .footer a{
+    color: white;
+    font-size: 13px;
+    }
+    .footer .container{
+    padding: 0px;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    }
+    .footer .container .communication{
+    text-align: end;
+    }
+    .footer .container .communication h2{
+    font-size: 30px; 
+    }
+    .footer .container .communication li{
+    margin-bottom: 10px;
+    }
+    .footer .container .help{
+    text-align: end;
+    }
+    .footer .container .help li{
+    margin-bottom: 10px;
+    }
+    .footer .container .page{
+    text-align: end;
+    }
+    .footer .container .page li{
+    margin-bottom: 10px;
+    }
+    .footer .container .social {
+    text-align: end;
+    }
+    .footer .container .social > img{
+    display: block;
+    place-self: center;
+    }
+    .footer .container .social ul{
+    display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .footer .container .social .facebook,
+    .footer .container .social .instgram,
+    .footer .container .social .linkedin
+    {
+        font-size: 20px;
+    }
+@media (max-width: 767px) {
+    .footer{
+        width: 100%;
+    }
+    .footer .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer .container .communication,
+    .footer .container .help,
+    .footer .container .page,
+    .footer .container .social {
+        text-align: center; 
+        margin: 0 auto; 
+        width: 100%;
+    }
+    .footer .container .social ul {
+    gap: 5px;
+    }
+    }
+/*End Footer*/
+        </style>
+    </head>
+<body>
+    <!--Start Header-->
+    <div class="header">
+        <div class="container">
+            <a href="./login.html" class="push-menu">تسجيل الدخول</a>
+            <ul> 
+                <li><a class="a" href="portfolio.html">حسابي</a></li>
+                <li><a class="a" href="join.html">التسجيل</a></li>
+                <li><a class="active" href="room.html">الغرف</a></li>
+                <li ><a class="a"  href="index.html">الرئيسية</a></li>
+            </ul>
+            <img class="logo-start" width="95px" src="./image/logo.png">
+        </div>
+    </div>
+    <!--End Header-->
+    <!--info-->
+    <div class="end-head"><div class="container"><p>تفاصيل الغرف/</p><p class="end">الغرف</p></div></div>
+    <!--Start Image-->
+    <div class="image">
+        <div class="container">
+            <div class="box1"><img height="410px" src="image/image 43.png" alt=""></div>
+            <div class="box2"><img height="200px" src="image/image 42.png" alt=""><img height="200px" src="image/cozy-living-room-interior-with-panoramic-window 2.png" alt=""></div>
+        </div>
+    </div>
+    <!--End Image-->
+    <!--Start Center-->
+    <div class="center">
+        <div class="container">
+            <div class="icons">
+                <div class="image-icon">
+                    <img src="image/s 2.png" alt="">
+                    <img src="image/s 4.png" alt="">
+                    <img src="image/s 5.png" alt="">
+                    <img src="image/s 6.png" alt="">
+                    <img src="image/s 7.png" alt="">
+                    <img src="image/s 8.png" alt="">
+                    <img src="image/s 9.png" alt="">
+                </div>
+                <p>EGP 1000 / month</p>
+            </div>
+            <div class="text">
+                <h2>مواصفات الغرفه</h2>
+                <p>الغرفة مصممة بعناية لتلبية احتياجات الطلاب الذين يبحثون عن مكان يوفر الراحة والهدوء مع لمسة من الأناقة. تتميز بمساحة واسعة ومنظمة تتيح سهولة الحركة والاستغلال الأمثل لكل زاوية، حيث تم تجهيزها بأثاث عملي ومريح يشمل سرير مريح، مكتب دراسي، وخزانة ملابس لتوفير كل ما تحتاجه في مكان واحد. الإضاءة الطبيعية المشرقة والتهوية الممتازة تضفي شعورًا منعشًا يجعل من الغرفة بيئة مثالية للدراسة والاسترخاء. بالإضافة إلى ذلك، توفر الغرفة مستوى عالٍ من الخصوصية التي تمنحك الشعور بالأمان والراحة طوال فترة إقامتك. إنها ليست مجرد غرفة، بل تجربة سكنية متكاملة صممت خصيصًا لتلبية احتياجاتك اليومية ودعم رحلتك التعليمية.</p>
+            </div>
+        </div>
+        <a class="go" href="">احجز الان</a>
+    </div>
+    <!--End Center-->
+    <!--Start Rooms-->
+    <div class="rooms">
+        <p class="head" >غرف تناسب ذوقك</p>
+        <div class="container">
+            <div class="box">
+                <img src="image/cozy-studio-apartment-with-bedroom-living-space 2.png" alt="">
+                <div class="text">
+                    <p class="price">1900 EGP</p>
+                    <p>غرفه مشتركة</p>
+                </div>
+                <div class="go-rooms">
+                    <a href="">عرض المزيد</a>
+                    <img src="image/arrow.png" alt="">
+                </div>
+            </div>
+            <div class="box">
+                <img src="image/cozy-studio-apartment-with-bedroom-living-space 2.png" alt="">
+                <div class="text">
+                    <p class="price">1900 EGP</p>
+                    <p>غرفه مشتركة</p>
+                </div>
+                <div class="go-rooms">
+                    <a href="">عرض المزيد</a>
+                    <img src="image/arrow.png" alt="">
+                </div>
+            </div>
+            <div class="box">
+                <img src="image/cozy-studio-apartment-with-bedroom-living-space 2.png" alt="">
+                <div class="text">
+                    <p class="price">1900 EGP</p>
+                    <p>غرفه مشتركة</p>
+                </div>
+                <div class="go-rooms">
+                    <a href="">عرض المزيد</a>
+                    <img src="image/arrow.png" alt="">
+                </div>
+            </div>
+            <div class="box">
+                <img src="image/cozy-studio-apartment-with-bedroom-living-space 2.png" alt="">
+                <div class="text">
+                    <p class="price">1900 EGP</p>
+                    <p>غرفه مشتركة</p>
+                </div>
+                <div class="go-rooms">
+                    <a href="">عرض المزيد</a>
+                    <img src="image/arrow.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End Rooms-->
+    <!--Start Footer-->
+    <div class="footer">
+        <div class="container">
+            <div class="communication">
+                <h3>التواصل</h3>
+                <ul>
+                    <li><a href="#">جامعه الدلتا</a></li>
+                    <li><a href="#">نبذه عنا</a></li>
+                    <li>01040050010</li>
+                    <li>Deltauniversity56@gamil.com</li>
+                </ul>
+            </div>
+            <div class="help">
+                <h3>الدعم والمساعدة</h3>
+                <ul>
+                    <li><a href="#">الدعم الفني</a></li>
+                    <li><a href="#">دليل السكن</a></li>
+                    <li><a href="#">الشروط والأحكام</a></li>
+                    <li><a href="#">سياسه الخصوصية</a></li>
+                </ul>
+            </div>
+            <div class="page">
+                <h3>الصفحات</h3>
+                <ul>
+                    <li><a href="index.html">الرئيسية </a></li>
+                    <li><a href="join.html">التسجيل </a></li>
+                    <li><a href="room.html">الغرف </a></li>
+                    <li><a href="#">الحساب الشخصي</a></li>
+                </ul>
+            </div>
+            <div class="social">
+                <img class="logo-end" src="./image/logo.png" alt="" width="100px">
+                <p>ابحث عن مكان اقامتك المثالي </p>
+                <ul>
+                    <li>
+                        <a href="#" class="instgram ">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="facebook ">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="linkedin ">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            </div>
+        </div>
+    <!--End footer-->
+</body>
+</html>

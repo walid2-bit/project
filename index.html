@@ -1,0 +1,1231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+    <!-- <link rel="stylesheet" href="css/normalize.css" /> -->
+    <!-- <link rel="stylesheet" href="css/home.css"/> -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="./webfonts/">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&#038;display=swap" rel="stylesheet" />
+</head>
+<body>
+    <style>
+        * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  :root {
+    --main-color: #2196f3;
+    --main-color-alt: #1787e0;
+    --main-transition: 0.3s;
+    --main-padding-top: 100px;
+    --main-padding-bottom: 100px;
+    --section-background: #ececec;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: "Cairo", sans-serif;
+  }
+  a {
+    text-decoration: none;
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+ body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* إخفاء أي تجاوزات أفقية */
+}
+
+.container {
+    max-width: 100%; /* تأكد من أن الحاوية لا تتجاوز عرض الشاشة */
+    margin: 0 auto; /* توسيط الحاوية */
+    padding: 0 15px; /* إضافة padding لتجنب الالتصاق بالحواف */
+}
+  .container {
+    /* padding-left: 15px;
+    padding-right: 15px; */
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* Small */
+@media (min-width: 768px) {
+    .container {
+      width: 750px;
+    }
+  }
+  /* Medium */
+  @media (min-width: 992px) {
+    .container {
+      width: 970px;
+    }
+  }
+  /* Large */
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+  }
+  /* End Global Rules */
+  /* start header */
+  .hello{
+    background-image: url(../image/header.png);
+    background-size: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  .hello .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ padding-bottom: 20px;
+  }
+  .hello .container ul{
+    display: flex;
+    gap: 54px;
+  }
+
+  .hello .container ul li a{
+    color: white;
+  }
+  .hello .container ul li a.active{
+    color: #1787e0;
+  }
+  .hello .container ul li a:hover{
+    border-bottom: 1px solid blue;
+    color: #1787e0;
+  }
+  .hello .container  .push-menu{
+    background-color: rgba(23, 92, 211, 1);
+    border-radius: 11px;
+    padding: 10px;
+    color: wheat;
+    width: 155px;
+    text-align: center;
+}
+.hello .text{
+    position: relative;
+} 
+ .text .container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+.text .container .image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+.text .container .image img {
+   max-width: 250px;
+}
+
+.text .container .image .move{
+  position: relative;
+  left: 225px;
+}
+
+.text .container .information{
+text-align: end;
+}
+.text .container .information p{
+    color: white;
+    border: 1px solid;
+    border-radius: 19px;
+    font-size: 12px;
+    width: fit-content;
+    justify-self: self-end;
+    padding: 7px;
+}
+
+.text .container .information h1{
+    color: white;
+    font-size: 40px;
+    text-align: end;
+}
+.text .container .information span{
+    color: white;
+    font-size: 15px;
+    text-align: end;
+    display: block;
+    padding-bottom: 20px;
+}
+.text .container .buttons{
+    display: flex;
+    gap: 17px;
+    justify-self: self-end;
+    position: relative;
+}
+.text .container .buttons .now{
+    background-color: rgba(23, 92, 211, 1);
+    border-radius: 11px;
+    padding: 15px 18px;
+    color: wheat;
+    text-align: center;
+}
+.text .container .buttons .show{
+    background-color: white;
+    border-radius: 11px;
+    color: black;
+    align-content: center;
+    padding: 8px 21px;
+}
+.text .container .buttons > img{
+    position: absolute;
+    left: -4px;
+    top: 21px;
+    animation: moving-arrow 1s linear infinite;
+
+}
+.text  .ttt{
+    text-align: center;
+    display: flex;
+    gap: 11px;
+    justify-content: center;
+    position: relative;
+    top: -17px;
+}
+.text  .ttt .tt{
+    background-color: rgba(2, 149, 215, 1);
+    display: inline-block;
+    padding: 3px 24px;
+    border-radius: 10px;
+}
+.text  .ttt .te{
+    background-color: white;
+    display: inline-block;
+    padding: 3px 24px;
+    border-radius: 10px;
+}
+.text  .ttt .tte{
+    background-color: white;
+    display: inline-block;
+    padding: 3px 24px;
+    border-radius: 10px;
+}
+
+@media (max-width: 767px) {
+    .text .container .information h1 {
+        font-size: 30px;
+    }
+  .text .ttt{
+    display: none;
+  }
+  .buttons{
+  }
+  .text .container .information span {
+    font-size: 15px;
+}
+  .text .container .image img {
+    display: none;
+  }
+  .hello .container ul{
+    gap: 24px;
+  }
+  .text .container{
+    gap: 20px;
+    display: block;
+  }
+}
+/* end hello */
+/* start about */
+.about-us{
+  position: relative;
+}
+.about-us .container > h4{
+  text-align: center;
+  font-size: 29px;
+}
+.about-us .container > p{
+  text-align: center;
+  font-size: 24px;
+  letter-spacing: 1px;
+  color: rgba(74, 75, 75, 1)
+}
+@media (max-width: 767px) {
+    .about-us .container > p {
+        font-size: 20px;
+        line-height: 1.8;
+        text-align: center;
+    }
+    }
+.about-us .container .opion{
+position: relative;
+}
+.about-us .container .opion .box{
+  display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin-top: 50px;
+      background-color: rgba(46, 66, 165, 0.1);
+      width: 100%;
+      padding: 10px;
+}
+.about-us .container .opion .number{
+  display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+}
+.about-us .container .opion  a{
+  display: table;
+  background-color:  rgba(23, 92, 211, 1);
+  color: white;
+  margin: 10px auto;
+  border-radius: 11px;
+  width: 126px;
+  text-align: center;
+  height: 37px;
+}
+/* end about */
+.check{
+padding-top: 50px;
+background-color: aliceblue;
+position: relative;
+}
+/* .check .container{
+} */
+.check .container > p{
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+}
+.check .container .image{
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding-bottom: 100px;
+
+    }
+    @media (max-width: 767px) {
+        .check .container .image{
+            padding-bottom: 20px;
+overflow-x: auto;
+scroll-snap-type: x mandatory;
+        }
+    }
+
+.check .container .image .box{
+  box-shadow: 2px 2px 2px 2px rgba(69, 161, 77, 0.2);
+  position: relative;
+  margin-bottom: 15px;
+}
+.check .container .image .box .go{
+  display: block;
+  background-color: blue;
+  color: white;
+  margin-left: 9px;
+  text-align: center;
+  width: 137px;
+  border-radius: 12px;
+  margin-bottom: 16px;
+}
+.check .container .box img{
+  padding: 15px;
+}
+.check .container .image .box .go > a{
+color: white;
+position: relative;
+left: 7px;
+}
+.check .container .image .box .go > img{
+  position: absolute;
+  left: 5px;
+  bottom: 9px;
+  animation: moving-arrow 1s linear infinite;
+}
+.check .container .image p{
+  text-align: end;
+  padding-right: 11px;
+}
+.check .container .image span{
+  position: absolute;
+  bottom: 56px;
+  left: 15px;
+  color: rgba(1, 89, 147, 1);
+}
+ /* end .check */
+ .how{
+  padding-top: 50px;
+  position: relative;
+  background-color: rgba(242, 250, 255, 1);
+ }
+ .how .container{ 
+ }
+ .how .container h2{
+  position: absolute;
+  top: -25px;
+  justify-self: anchor-center;             
+ }
+ .how .container .image{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+ }
+ 
+ .how .container .image img{
+  width: 400px;
+  height: 400px;
+  margin-bottom: 17px;
+}
+ 
+  
+.find{
+
+background-color: aliceblue;
+ }
+ .find .container{
+flex-wrap: wrap;
+ }
+ .find .container .box{
+text-align: center;
+ }
+ .find .container .box h3{
+    font-size: 36px;
+    font-weight: bold;
+  
+ }
+ .find .container .box p{
+  color: rgba(74, 75, 75, 1);
+ }
+ .find .container .box .buttons{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  color: white;
+ }
+ .find .container .box .buttons a{
+  box-shadow: 2px 2px 2px 2px rgba(69, 161, 77, 0.2);
+  padding: 10px;
+ }
+ .find .container .box .buttons a:hover{
+ color: blue;
+ }
+.find .text{
+padding-top: 50px;
+padding-bottom: 50px;
+background-color: rgba(255, 255, 255, 1);
+}
+.find .text .container{
+  display: flex;
+      justify-content: space-evenly;
+      padding-bottom: 50px;
+      padding-top: 50px;
+}
+.find .text .container .box{
+box-shadow: 2px 2px 2px 2px rgba(69, 161, 77, 0.2);
+width: 301px;
+height: 466px;
+position: relative;
+transition: transform 0.3s ease;
+}
+.find .text .container .box img{
+  position: relative;
+  left: 79px;
+  bottom: -9px;
+}
+
+.find .text .container .box .tittle h5{
+  position: relative;
+  top: -13px;
+  left: 27px;
+  font-size: 18px;
+}
+.find .text .container p{
+  padding: 5px;
+  position: absolute;
+  top: 105px;
+  color: black;
+}
+.find .text .container .box ul {
+  position: relative;
+  padding-bottom: 32px;
+  text-align: end;
+  margin-right: 50px;
+}
+/* .find .text .container .box ul li{
+
+} */
+.find .text .container .box ul li::before{
+  font-family: "Font Awesome 5 Free";
+  content: "\f00c";
+  margin-right: 10px;
+  font-weight: 900;
+  color: var(--main-color);
+  position:absolute;
+  right: -50px;
+  margin-top: 7px;
+}
+.find .text .container .box a{
+  display: block;
+  border: 1px solid ;
+  border-radius: 36px;
+  color: black;
+  margin-bottom: 11px;
+ 
+}
+.find .text .container .box:hover{
+  transition: transform 2s ease;
+  transform: scale(1.2) ;
+}
+@media (max-width: 767px) {
+  .find .text .container .box{
+    width: 100%;
+    height: auto;
+  }
+  .find .text .container .box:hover{
+    display: none;
+  }
+}
+/* end box */
+.find .text .container .box1{
+  box-shadow: 2px 2px 2px 10px rgba(69, 161, 77, 0.2);
+  width: 301px;
+  height: 466px;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+  }
+  .find .text .container .box1 img{
+    position: relative;
+    bottom: -9px;
+    left: 210px;
+  }
+  .find .text .container .box1 .tittle h5{
+    position: relative;
+    top: -13px;
+    left: 132px;
+    font-size: 18px;
+  }
+.find .text .container .box1 ul {
+  position: relative;
+  padding-bottom: 37px;
+  text-align: end;
+  margin-right: 37px;
+  }
+  .find .text .container .box1 ul li::before{
+    font-family: "Font Awesome 5 Free";
+    content: "\f00c";
+    margin-right: 10px;
+    font-weight: 900;
+    color: var(--main-color);
+    position:absolute;
+    right: -36px;
+    margin-top: 7px;
+  }
+  .find .text .container .box1 .private span{
+    position: absolute;
+    color: rgba(1, 89, 147, 1);
+    top: 26px;
+    font-size: 34px;
+    right: 213px;
+}
+  .find .text .container .box1 a{
+    display: block;
+    border: 1px solid ;
+    border-radius: 36px;
+    color: black;
+    margin-bottom: 11px;
+    text-align: center;
+  }
+  .find .text .container .box1:hover{
+    background-color: rgba(188, 202, 255, 0.13);
+    transition: transform 2s ease;
+    transform: scale(1.2) ;
+  
+  }
+  @media (max-width: 767px) {
+    .find .text .container .box1{
+      width: 100%;
+      height: auto;
+    }
+    .find .text .container .box1:hover{
+      display: none;
+    }
+  }
+   /* end box1 */
+
+   .find .text .container .box2{
+    box-shadow: 2px 2px 2px 2px rgba(69, 161, 77, 0.2);
+    width: 301px;
+    height: 466px;
+    position: relative;
+    transition: transform 0.3s ease;
+    }
+    .find .text .container .box2 img{
+      position: relative;
+      left: 184px;
+      bottom: -9px;
+    }
+    
+    .find .text .container .box2 .tittle h5{
+      position: relative;
+      top: -13px;
+      left: 119px;
+      font-size: 18px;
+    }
+    .find .text .container .box2 ul {
+      position: relative;
+      padding-bottom: 32px;
+      text-align: end;
+      margin-right: 55px;
+  }
+  
+    /* .find .text .container .box ul li{
+    
+    } */
+    .find .text .container .box2 ul li::before{
+      font-family: "Font Awesome 5 Free";
+      content: "\f00c";
+      margin-right: 10px;
+      font-weight: 900;
+      color: var(--main-color);
+      position:absolute;
+      right: -44px;
+      margin-top: 7px;
+    }
+    .find .text .container .box2 a{
+      display: block;
+      border: 1px solid ;
+      border-radius: 36px;
+      color: black;
+      margin-bottom: 11px;
+      text-align: center;
+    }
+    .find .text .container .box2:hover{
+      transition: transform 2s ease;
+      transform: scale(1.2) ;
+    }
+    @media (max-width: 767px) {
+      @media (max-width: 767px) {
+        .find .text .container .box2{
+          width: 100%;
+          height: auto;
+        }
+        .find .text .container .box2:hover{
+          display: none;
+         
+        }
+      }
+    }
+/* end box2 */
+    .find .text .container .box3{
+      box-shadow: 2px 2px 2px 10px rgba(69, 161, 77, 0.2);
+      width: 301px;
+      height: 466px;
+      position: relative;
+      transition: transform 0.3s ease, box-shadow 0.3s ease; 
+      }
+      .find .text .container .box3 img{
+        position: relative;
+        bottom: -9px;
+        left: 210px;
+      }
+      .find .text .container .box3 .tittle h5{
+        position: relative;
+        top: -13px;
+        left: 132px;
+        font-size: 18px;
+      }
+    .find .text .container .box3 ul {
+      position: relative;
+      padding-bottom: 37px;
+      text-align: end;
+      margin-right: 37px;
+      }
+      .find .text .container .box3 ul li::before{
+        font-family: "Font Awesome 5 Free";
+        content: "\f00c";
+        margin-right: 10px;
+        font-weight: 900;
+        color: var(--main-color);
+        position:absolute;
+        right: -36px;
+        margin-top: 7px;
+      }
+      .find .text .container .box3 .private span{
+        position: absolute;
+        color: rgba(1, 89, 147, 1);
+        top: 26px;
+        font-size: 34px;
+        right: 213px;
+    }
+      .find .text .container .box3 a{
+        display: block;
+        border: 1px solid ;
+        border-radius: 36px;
+        color: black;
+        margin-bottom: 11px;
+        text-align: center;
+      }
+      .find .text .container .box3:hover{
+        background-color: rgba(231, 235, 255, 1);
+        transition: transform 2s ease;
+        transform: scale(1.2) ;
+      }
+      @media (max-width: 767px) {
+        .find .text .container .box3{
+          width: 100%;
+          height: auto;
+        }
+        .find .text .container .box3:hover{
+          display: none;
+        }
+        .find .text .container p{
+            justify-self: anchor-center;
+        }
+      }
+      /* end box3 */
+.hidden{
+  display: none;
+}
+ /* end reservation */
+ /* start opinion */
+ 
+ .opinions{
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: aliceblue;
+  position: relative;
+ }
+ .opinions .container h4{
+  text-align: center;
+  font-size: 29px;
+ }
+  .scroll-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+}
+.opinions .container .box img{
+  width: 300px;
+  height: 150px;
+ }
+.scroll-container .box {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    margin-right: 10px; 
+}
+
+.scroll-container img {
+    max-width: 100%;
+    height: auto;
+}
+/* end .opinions */
+.contact{
+  background-image: url(../image/Rectangle\ 19385.png);
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: aliceblue;
+  position: relative;
+}
+.contact {
+width: 100%;
+}
+
+.contact .container h3{
+  text-align: center;
+  font-size: 29px;
+  color: white;
+}
+.contact .container p{
+  text-align: center;
+  font-size: 19px;
+  letter-spacing: 1px;
+  margin-right: 59px;
+  color: white
+}
+.contact .container a{
+  display: block;
+  background-color: rgba(23, 92, 211, 1);
+  color: white;
+  margin: 10px auto;
+  border-radius: 11px;
+  width: 180px;
+  text-align: center;
+  height: 48px;
+  padding: 7px;
+}
+/* end content */
+.footer{
+  background-color: var(--main-color-footer);
+  background-color: rgba(1, 89, 147, 1);
+}
+.footer .container > a{
+  color: white;
+}
+.footer .container{
+  padding: 0px;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+
+}
+.footer .container {
+  text-align: end;
+}
+.footer .container h1{
+  font-size: 20px; 
+  color: white;
+}
+.footer .container  li{
+  margin-bottom: 10px;
+  color: white;
+}
+.footer .container li a{
+color: white;
+font-size: 16px;
+}
+.footer .container p{
+    color: white;
+}
+.footer .container .social > img{
+  display: block;
+  place-self: center;
+}
+.footer .container .social ul{
+  display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+  
+}
+.footer .container .social .facebook{
+color: white;
+}
+.footer .container .social .instgram{
+color: red;
+}
+.footer .container .social .linkedin{
+color: white;
+}
+@media (max-width: 767px) {
+    .footer .container {
+       display: grid;
+       grid-template-columns: repeat(2, 1fr); 
+    }
+
+    .footer .container h1 {
+        font-size: 18px;
+        text-align: center; 
+    }
+
+    .footer .container ul {
+        text-align: center; 
+    }
+
+    .footer .container ul li {
+        margin-bottom: 10px;
+    }
+
+    .footer .container ul li a {
+        font-size: 16px; 
+    }
+
+    .footer .container p {
+        text-align: center; 
+    }
+
+    .footer .container .social ul {
+        justify-content: center; 
+        gap: 15px; 
+    }
+
+    .footer .container .social ul li a {
+        font-size: 20px;
+    }
+}
+
+  @keyframes moving-arrow {
+    
+    100% {
+      transform: translateX(10px);
+    }
+  }
+    </style>
+    <div class="hello">
+            <div class="container">
+                <a href="./login.html" class="push-menu" target="_blank" >تسجيل الدخول</a>
+                <ul> 
+                  <li><a href="portfolio.html">حسابي</a></li>
+                    <li><a href="join.html">التسجيل</a></li>
+                    <li><a href="room.html">الغرف</a></li>
+                    <li><a href="index.html" class="active">الرئيسية</a></li>
+                </ul>
+            <img src="./image/logo.png">
+            </div>
+            <div class="text">
+                <div class="container">
+                    <div class="image">
+                        <img src="./image/Img 1.png" class="move1">
+                        <img src="./image/Img 2.png" class="move" >
+                        <img src="./image/Img 5.png" class="move2">
+                    </div>
+                    <div class="information">
+                        <p>! جامعة الدلتا ترحب بجميع طلابها الأعزاء </p>
+                    <h1>مرحباً بكم في الحرم الجامعي <br>
+                        لجامعة الدلتا</h1>
+                    <span>سجل معنا الآن عزيزي الطالب واحصل علي الغرفة المثالية لك داخل الحرم الجامعي<br>
+                         لجامعة الدلتا؛ ابدأ رحلتك في البحث عن غرفتك معنا بكُل سهولة</span>
+                    <div class="buttons">
+                        <a href="#" class="show">مشاهدة كل الغرف</a>
+                        <a href="./login.html" class="now">احجز الان</a>
+                        <img src="./image/Arrow_Right_MD.png">
+                </div>
+            </div>
+        </div>
+        <div class="ttt">
+            <div class="tt"></div>
+            <div class="te"></div>
+            <div class="tte"></div>
+        </div>
+        </div>
+    </div>
+<!-- end hello -->
+    <div class="about-us" id="about-us">
+        <div class="container">
+            <h4>من نحن؟</h4>
+            <p>
+                نحن منصة سكنية متخصصة في توفير بيئة جامعية آمنة ومريحة للطلاب. نقدم حلول سكنية مرنة 
+                <br>
+                تناسب احتياجات الطلاب الأكاديمية والحياتية، مع توفير خدمات متميزة تسهم في راحتهم 
+                 <br>
+                 ورفاهيتهم. نعمل على تسهيل اختيار السكن وتوفير كافة المرافق التي تساعد الطلاب على التكيف 
+                 <br>
+                 مع حياتهم الجامعية بكل سهولة
+                </p>
+             <div class="opion">
+                <div class="box">
+                    <div>
+                        <span class="number">90%</span>
+                        <span class="text">نسبه رضا الطلاب</span>
+                    </div>
+                    <div>
+                        <span class="number">+120</span>
+                        <span class="text">غرفه محجوزة</span>
+                    </div>
+                    <div>
+                        <span class="number">+500</span>
+                        <span class="text">ايام الاقامه</span>
+                    </div>
+                    <div>
+                        <span class="number">+365</span>
+                        <span class="text">غرف مؤجرة</span>
+                    </div>
+                </div>
+                <div >
+                    <a href="about.html" >عرض المزيد</a>
+                </div>
+             </div>
+        </div>
+    </div>
+<!-- end about -->
+ <div class="check">
+    <div class="container">
+        <p>
+             انتق غرفتك المثالية
+        </p>
+      <div class="image">
+            <div class="box">
+                <img src="./image/cozy-studio-apartment-with-bedroom-living-space 2.png" alt="">
+                <p>غرفه مشتركة</p>
+                <span>1900 EGP</span>
+                <div class="go">
+                    <a href="#">عرض المزيد</a>
+                    <img src="./image/Vector.png" alt="" class="logo">
+                </div>
+            </div>
+            <div class="box">
+                <img src="./image/Group 1000002285.png" alt="">
+                <p>غرفه مميزة</p>
+                <span>2100 EGP</span>
+                <div  class="go">
+                    <a href="#">عرض المزيد</a>
+                    <img src="./image/Vector.png" alt="" class="logo">
+                </div>
+            </div>
+            <div class="box">
+                <img src="./image/cozy-studio-apartment-with-bedroom-living-space 2.png" alt="">
+                <p>غرفه زوجية</p>
+                <span>1900 EGP</span>
+                <div class="go">
+                    <a href="#">عرض المزيد</a>
+                    <img src="./image/Vector.png" alt="" class="logo">
+                </div>
+            </div>
+            <div class="box">
+                <img src="./image/cozy-studio-apartment-with-bedroom-living-space 2.png" alt="">
+                <p>غرفه فردية</p>
+                <span>1900 EGP</span>
+                <div class="go" >
+                    <a href="#">عرض المزيد</a>
+                    <img src="./image/Vector.png" alt="" class="logo">
+                </div>
+               
+            </div>
+    </div>
+</div>
+ </div>
+<!-- end check -->
+<div class="how">
+    <div class="container ">
+        <h2 class="go-to"> كيف تحجز بخطوات بسيطة ؟</h2>
+        <div class="image">
+            <img src="./image/Step 5.png" alt="">
+            <img src="./image/Step 7.png" alt="">
+            <img src="./image/Step 3.png" alt="">
+            <img src="./image/Step 6.png" alt="">
+        </div>
+    </div>
+</div>
+
+ <div class="find">
+    <div class="container">
+        <div class="box">
+            <h3>
+             ! اعثر علي الباقة المثالية لسكنك الجامعي 
+            </h3>
+            <p>
+                نقدّم لك خيارات سكن مريحة وآمنة تناسب احتياجاتك، سواء كنت 
+                <br>
+                تبحث عن إقامة اقتصادية في غرفة مشتركة أو تجربة فاخرة مع مزايا 
+                <br>
+                إضافية. اختر خطتك المثالية واستمتع بتجربة سكنية متكاملة داخل الحرم 
+                <br>
+               !الجامعه 
+            </p>
+            <div class="buttons">
+                <a href="#" id="monthly-btn">شهري</a>
+                <a href="#" id="secondary-btn">ثانوي</a>
+            </div>
+        </div>
+        </div>
+        <div class="text">
+            <div class="container">
+            <div class="box" id="box">
+                <img src="./image/Icon.png" alt="">
+                <div class="tittle">
+                    <h5>الباقات العادية</h5>
+                </div>
+                <p>ج.م/شهريا 
+                    1000
+                </p>
+                <ul>
+                    <li>سكن في غرفة مشتركة</li>
+                    <li>انترنت مجاني بسرعة محدودة</li>
+                    <li>دخول للمرافق العامة
+                        <br>
+                        (صالة رياضية.قاعة دراسة)
+                    </li>
+                    <li>دعم فني خلال اوقات محددة</li>
+                    <li>وجبة مجانية يوميا
+                        <br>
+                        في كافتيريا السكن</li>
+                </ul>
+                <a href="#">اشترك الان</a>
+            </div>
+            <div class="box1" id="box1">
+                <img src="./image/Icon (1).png" alt="">
+                <div class="tittle">
+                    <h5>الباقات المميزة</h5>
+                </div>
+                <p>ج.م/شهريا 
+                    3500
+                </p>
+                <div class="private">
+                    <span class="speciall" >VIP</span>
+                </div>
+                <ul class="vip">
+                    <li>غرفه خاصة او مزدوجة مع مميزات
+                        اضافيه
+                    </li>
+                    <li>انترنت بسرعة عالية</li>
+                    <li>دخول حصري لصالات الترفيه
+                        والمرافق الخاصة
+                    </li>
+                    <li>
+                        دعم فني على مدار الساعة
+                    </li>
+                    <li>
+                    تنظيف الغرف اسبوعيا مجانا
+                    </li>
+                </ul>
+                <a href="#">اشترك الان</a>
+            </div>
+            <div class="box2 hidden" id="box2">
+                <img src="./image/Icon.png" alt="">
+                <div class="tittle">
+                    <h5>الباقات العادية</h5>
+                </div>
+                <p>ج.م/شهريا 
+                    6000
+                </p>
+                <ul>
+                    <li>سكن في غرفة مشتركة</li>
+                    <li>انترنت مجاني بسرعة محدودة</li>
+                    <li>دخول للمرافق العامة
+                        <br>
+                        (صالة رياضية.قاعة دراسة)
+                    </li>
+                    <li>دعم فني خلال اوقات محددة</li>
+                    <li>وجبة مجانية يوميا
+                        <br>
+                        في كافتيريا السكن</li>
+                </ul>
+                <a href="#">اشترك الان</a>
+            </div>
+            <div class="box3 hidden" id="box3">
+                <img src="./image/Icon (1).png" alt="">
+                <div class="tittle">
+                    <h5>الباقات المميزة</h5>
+                </div>
+                <p>ج.م/شهريا 
+                    9000
+                </p>
+                <div class="private">
+                    <span class="speciall" >VIP</span>
+                </div>
+                <ul class="vip">
+                    <li>غرفه خاصة او مزدوجة مع مميزات
+                        اضافيه
+                    </li>
+                    <li>انترنت بسرعة عالية</li>
+                    <li>دخول حصري لصالات الترفيه
+                        والمرافق الخاصة
+                    </li>
+                    <li>
+                        دعم فني على مدار الساعة
+                    </li>
+                    <li>
+                    تنظيف الغرف اسبوعيا مجانا
+                    </li>
+                </ul>
+                <a href="#">اشترك الان</a>
+            </div>
+        </div> 
+        </div>
+        </div>
+        <!-- end find -->
+        <div class="opinions" id="opinions">
+            <div class="container">
+                <h4>قصص نجاح اسكان طلابنا</h4>
+                <div class="scroll-container">
+                    <div class="box">
+                        <img src="./image/Testemonial 6.png" alt="">
+                    </div>
+                    <div class="box">
+                        <img src="./image/Testemonial 5.png" alt="">
+                    </div>
+                    <div class="box">
+                        <img src="./image/Testemonial 7.png" alt="">
+                    </div>
+                    <div class="box">
+                        <img src="./image/Testemonial 8.png" alt="">
+                    </div>
+                    <div class="box">
+                        <img src="./image/Testemonial 9.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+ <div class="contact" id="contact" >
+    <div class="container">
+        <div class="box">
+            <h3>
+              ! احجز مكانك الآن واستمتع بإقامة مريحة وآمنة 
+            </h3>
+            <p>
+               
+             لا تفوّت الفرصة! احجز غرفتك الجامعية الآن واستمتع بسكن مريح وآمن مصمم لدعم رحلتك
+              <br>
+             التعليمية. اختر بين الغرف الفردية والمشتركة واستمتع بخدمات متكاملة تلبي احتياجاتك 
+        <br>
+             . اليومية 
+            </p>
+            <a href="./login.html" target="_blank" > احجز الان</a>
+        </div>
+    </div>
+ </div>
+<!-- end contact -->
+<div class="footer">
+    <div class="container">
+        <div class="communication">
+         <h1>التواصل</h1>
+         <ul>
+            <li><a href="#">جامعه الدلتا</a></li>
+            <li><a href="#">نبذه عنا</a></li>
+            <li>01040050010</li>
+            <li>Deltauniversity56@gamil.com</li>
+         </ul>
+         </div>
+        <div class="help">
+         <h1>الدعم والمساعدة</h1>
+         <ul>
+            <li><a href="#">الدعم الفني</a></li>
+            <li><a href="#">دليل السكن</a></li>
+            <li><a href="#">الشروط والأحكام</a></li>
+            <li><a href="#">سياسه الخصوصية</a></li>
+         </ul>
+         </div>
+        <div class="page">
+         <h1>الصفحات</h1>
+         <ul>
+            <li><a href="index.html">الرئيسية </a></li>
+            <li><a href="join.html">التسجيل </a></li>
+            <li><a href="room.html">الغرف </a></li>
+            <li><a href="portfolio.html">الحساب الشخصي</a></li>
+         </ul>
+         </div>
+         <div class="social">
+            <img src="./image/logo.png" alt="" width="100px">
+            <p>ابحث عن مكان اقامتك المثالي </p>
+            <ul>
+                <li>
+                    <a href="#" class="instgram">
+                        <i class="fa-brands fa-instagram"></i>
+                     </a>
+                     </li>
+                <li>
+                    <a href="#" class="facebook">
+                        <i class="fa-brands fa-facebook"></i>
+                     </a>
+                     </li>
+                     <li>
+                        <a href="#" class="linkedin">
+                            <i class="fa-brands fa-linkedin"></i>
+                         </a>
+                        </li>
+            </ul>
+         </div>
+        </div>
+    </div>
+        <script >
+            document.getElementById('monthly-btn').addEventListener('click', function(event) {
+    event.preventDefault();
+    document.getElementById('box').classList.remove('hidden');
+    document.getElementById('box1').classList.remove('hidden');
+    document.getElementById('box2').classList.add('hidden');
+    document.getElementById('box3').classList.add('hidden');
+});
+document.getElementById('secondary-btn').addEventListener('click', function(event) {
+    event.preventDefault();
+    document.getElementById('box').classList.add('hidden');
+    document.getElementById('box1').classList.add('hidden');
+    document.getElementById('box2').classList.remove('hidden');
+    document.getElementById('box3').classList.remove('hidden');
+});
+        </script>
+</body>
+</html>
